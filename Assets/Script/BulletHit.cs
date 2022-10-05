@@ -29,7 +29,7 @@ public class BulletHit : MonoBehaviour, IInterract
 
         IEnumerator SpawnObject()
         {
-            float rndmpos= Random.Range(3f, 10f);
+            float rndmpos= Random.Range(-5f, 5f);
             Vector3 variousPos = new Vector3(rndmpos, rndmpos, rndmpos);
             GameObject pooledGameobject = PoolingManager.instance.SpawnFromPool("Enemy", transform.position+ variousPos, Quaternion.identity);
             pooledGameobject.SetActive(true);
