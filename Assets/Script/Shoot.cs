@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
+    [SerializeField] UpgradeSO _upgradeSO;
     [SerializeField] Transform Bullet_Emitter;
     [SerializeField] GameObject Bullet;
     [SerializeField] private float Bullet_Forward_Force;
@@ -20,6 +21,7 @@ public class Shoot : MonoBehaviour
     }
     public void Fire(ShootingManager shootingManager,Transform target)
     {
+        Bullet_Forward_Force = _upgradeSO.BulletForwardSpeed;
         GameObject Temporary_Bullet_Handler = PoolingManager.instance.SpawnFromPool("Bullet", Bullet_Emitter.transform.position, Quaternion.identity);
 
         Rigidbody Temporary_RigidBody;

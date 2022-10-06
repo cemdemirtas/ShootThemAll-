@@ -40,7 +40,6 @@ public class ClosestEnemy
             {
                 minimumDistance = distance;
                 nearestEnemy = collider.transform;
-                Debug.Log("detect enemy");
 
             }
         }
@@ -48,7 +47,6 @@ public class ClosestEnemy
         {
             nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.red;
             //Debug.Log("Nearest Enemy: " + nearestEnemy + "; Distance: " + minimumDistance);
-            Debug.Log("there is no enemy");
         }
         else
         {

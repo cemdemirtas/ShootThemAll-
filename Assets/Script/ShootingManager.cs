@@ -27,7 +27,12 @@ public class ShootingManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && closestEnemy.nearestEnemy!=null)
         {
             shoot.Fire(this, closestEnemy.nearestEnemy);
-
+        }
+        
+        
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            UIManager.UpgradePanelEvent?.Invoke();
         }
     }
 
