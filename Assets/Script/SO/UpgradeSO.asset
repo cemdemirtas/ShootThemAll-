@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659e2e2e35a02b948b51b3cc01fc177d, type: 3}
   m_Name: UpgradeSO
   m_EditorClassIdentifier: 
-  BulletForwardSpeed: 1
-  BulletCount: 1
+  BulletForwardSpeed: 20
+  BulletCount: 0
   Health: 100

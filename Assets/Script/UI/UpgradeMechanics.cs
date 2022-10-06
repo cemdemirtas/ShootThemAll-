@@ -15,4 +15,10 @@ public class UpgradeMechanics : MonoBehaviour
         _upgradeSO.BulletForwardSpeed = _upgradeSO.BulletForwardSpeed + 10;
         UIManager.instance.UpgradePanelHide();
     }
+    public void UpgradeFireCount()
+    {
+        _upgradeSO.BulletCount++;
+        
+        UIManager.instance.UpgradePanelHide();
+    }
 }

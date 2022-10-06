@@ -9,26 +9,26 @@ public class Shoot : MonoBehaviour
     [SerializeField] GameObject Bullet;
     [SerializeField] private float Bullet_Forward_Force;
     [SerializeField] public Transform enemy;
-
     ShootingManager _shootingManager;
+    [SerializeField] string _bulletType;
     public void Initiliaze(ShootingManager shootingManager)
     {
         _shootingManager = shootingManager;
     }
-    void Update()
+    private void Awake()
     {
-
+        _bulletType = ((UpgradeSO.bulletTypeEnum)_upgradeSO.BulletCount).ToString();
     }
     public void Fire(ShootingManager shootingManager,Transform target)
     {
+        _bulletType = ((UpgradeSO.bulletTypeEnum)_upgradeSO.BulletCount).ToString();
+
         Bullet_Forward_Force = _upgradeSO.BulletForwardSpeed;
-        GameObject Temporary_Bullet_Handler = PoolingManager.instance.SpawnFromPool("Bullet", Bullet_Emitter.transform.position, Quaternion.identity);
+
+        GameObject Temporary_Bullet_Handler = PoolingManager.instance.SpawnFromPool(_bulletType, Bullet_Emitter.transform.position, Quaternion.identity);
 
         Rigidbody Temporary_RigidBody;
         Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody>();
-        //Temporary_RigidBody.AddForce(transform.forward * Bullet_Forward_Force);
-        //transform.LookAt(enemy);
-        //Temporary_Bullet_Handler.transform.position = Vector3.Lerp(Bullet_Emitter.position, enemy.position, 5);
         transform.LookAt(target);
         Vector3 direction = (Vector3)target.position - Temporary_RigidBody.position;
 
