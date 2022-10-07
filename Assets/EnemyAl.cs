@@ -5,12 +5,14 @@ using UnityEngine.AI;
 using DG.Tweening;
 public class EnemyAl : MonoBehaviour, IInterract
 {
+    UIManager UIManager;
     NavMeshAgent nav;
     private float OverlapRadius = 10;
     private Transform nearestEnemy;
     private int enemyLayer;
     Animator animator;
-    [SerializeField] GameObject player;
+    //[SerializeField] GameObject player;
+    [SerializeField] ParticleSystem explosionEffect;
     private void Start()
     {
         enemyLayer = LayerMask.NameToLayer("Player");
@@ -64,7 +66,7 @@ public class EnemyAl : MonoBehaviour, IInterract
     public void interract()
     {
 
-        gameObject.SetActive(false);
+        StartCoroutine(nameof(Die));
 
     }
     private void OnTriggerEnter(Collider other)
@@ -72,8 +74,15 @@ public class EnemyAl : MonoBehaviour, IInterract
         if (other.gameObject.tag == "Bullet")
         {
             interract();
-
-
+            //UIManager.instance._killCount++;
+            UIManager.KillEvent?.Invoke();
+            //Debug.Log("kill count"+UIManager.instance._killCount);
         }
+    }
+    IEnumerator Die()
+    {
+        explosionEffect.Play();
+        yield return new WaitForSeconds(2);
+        this.gameObject.SetActive(false);
     }
 }

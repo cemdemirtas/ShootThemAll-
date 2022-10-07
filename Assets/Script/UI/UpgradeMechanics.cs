@@ -17,8 +17,8 @@ public class UpgradeMechanics : MonoBehaviour
     }
     public void UpgradeFireCount()
     {
-        _upgradeSO.BulletCount++;
-        
         UIManager.instance.UpgradePanelHide();
+        if (_upgradeSO.BulletCount >= 2) return;
+        _upgradeSO.BulletCount++;
     }
 }

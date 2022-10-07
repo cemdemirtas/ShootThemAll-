@@ -24,7 +24,7 @@ public class ShootingManager : MonoBehaviour
     {
         if (closestEnemy == null) return;
         closestEnemy.GetNearestEnemy(this);
-        if (Input.GetKeyDown(KeyCode.Space) && closestEnemy.nearestEnemy!=null)
+        if (Input.GetKeyDown(KeyCode.Space) && closestEnemy.nearestEnemy!=null&&UIManager.instance._killCount<30)
         {
             shoot.Fire(this, closestEnemy.nearestEnemy);
         }
