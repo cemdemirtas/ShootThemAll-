@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingManager : MonoBehaviour
 {
-   ClosestEnemy closestEnemy=new ClosestEnemy();
+    ClosestEnemy closestEnemy = new ClosestEnemy();
     [SerializeField] Shoot shoot;
     EnemyAl en;
     private void Awake()
@@ -24,17 +24,13 @@ public class ShootingManager : MonoBehaviour
     {
         if (closestEnemy == null) return;
         closestEnemy.GetNearestEnemy(this);
-        if (Input.GetKeyDown(KeyCode.Space) && closestEnemy.nearestEnemy!=null&&UIManager.instance._killCount<30)
+        if (Input.GetKeyDown(KeyCode.Space) && closestEnemy.nearestEnemy != null && UIManager.instance._panelCount < 30)
         {
             shoot.Fire(this, closestEnemy.nearestEnemy);
         }
-        
-        
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            UIManager.UpgradePanelEvent?.Invoke();
-        }
     }
-
-  
 }
+
+
+
+

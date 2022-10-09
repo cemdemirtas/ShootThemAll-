@@ -12,9 +12,14 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] Image _killSlider;
+    [SerializeField] Image _moneyImage;
 
 
+    [SerializeField] public float _panelCount;
     [SerializeField] public float _killCount;
+
+
+    [SerializeField] LevelSO _levelSO;
     private void Awake()
     {
 
@@ -25,6 +30,7 @@ public class UIManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        KillEvent += PanelCount;
         KillEvent += KillCount;
         UpgradePanelEvent += UpgradePanelShow;
     }
@@ -36,11 +42,11 @@ public class UIManager : MonoBehaviour
     }
     public void UpgradePanelShow()
     {
-        if (_killCount == 29)
+        if (_panelCount == 29)
         {
             _upgradePanel.SetActive(true);
             Time.timeScale = 0;
-            _killCount = 0;
+            _panelCount = 0;
         }
 
     }
@@ -48,9 +54,16 @@ public class UIManager : MonoBehaviour
     //{
     //    _upgradePanel.SetActive(true);
     //}
+    private void PanelCount()
+    {
+        _moneyImage.transform.GetComponent<Animator>().SetTrigger("Shake");
+        UpgradePanelShow();
+        _panelCount++;
+    }
     private void KillCount()
     {
-        UpgradePanelShow();
         _killCount++;
+        _killSlider.fillAmount = (_killCount / _levelSO.LevelIndex * 10)/100;
+        Debug.Log(_killSlider.fillAmount);
     }
 }
