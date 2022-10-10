@@ -3,7 +3,42 @@ guid: 50146b8dcb57ce7448f932e5382e08b5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 10 - Default
+    second: {fileID: 2100000, guid: 78f632d5ed01d584fa5cb0ad0efd7b71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #0
+    second: {fileID: 2100000, guid: ff4ff7acb033e0144b2ae5f6e152d262, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body
+    second: {fileID: 2100000, guid: abc093486f000fa46932eecf6884a119, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: buttom
+    second: {fileID: 2100000, guid: 97438b64453a93846892627aeeefd307, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: doors & elements
+    second: {fileID: 2100000, guid: d1f80e0e69a7e994baefa8bde687e039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tires
+    second: {fileID: 2100000, guid: 967c581c2ace6504381e3c08a2aa8b03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows glass
+    second: {fileID: 2100000, guid: 5dba487fb8b52f74fbd937cf8ee54d8d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -16,7 +51,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -24,7 +60,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -79,8 +115,959 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: 1
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Group066
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Group065
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Object420
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Object418
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lights
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Group069
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Group064
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Group070
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sphere046
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Sphere047
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Circle002
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: fbx(Clone)
+      parentName: 
+      position: {x: -0.37532255, y: 1.4996307, z: -0.37964118}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 1
+      parentName: fbx(Clone)
+      position: {x: 0.021717377, y: 0.000000076293944, z: -0.00000030517577}
+      rotation: {x: 0.15859099, y: 0.33985335, z: -0.094808444, w: 0.92214966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object381
+      parentName: 1
+      position: {x: 2.2815561, y: -0.11382904, z: 0.17004989}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doors and windows
+      parentName: 1
+      position: {x: -0.8033901, y: 0.0048088073, z: 0.16876175}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object383
+      parentName: doors and windows
+      position: {x: 2.005379, y: -0.004809265, z: 0.36409026}
+      rotation: {x: 0.65328157, y: -0.27059808, z: 0.27059802, w: 0.6532814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box075
+      parentName: doors and windows
+      position: {x: 1.2003629, y: -1.0137476, z: -0.12226166}
+      rotation: {x: -0.001487711, y: -0.7069256, z: 0.7072848, w: 0.0014885288}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object382
+      parentName: doors and windows
+      position: {x: -0.9069408, y: -0.8757483, z: -0.006399841}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object448
+      parentName: doors and windows
+      position: {x: -2.0955675, y: -0.0048086545, z: 0.36757323}
+      rotation: {x: 0, y: 0, z: -0.00000008742278, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object385
+      parentName: doors and windows
+      position: {x: 0.3860838, y: -0.004809265, z: -0.10448395}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mirrors
+      parentName: 1
+      position: {x: 1.3291614, y: -0.000000076293944, z: 0.34599853}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box065
+      parentName: mirrors
+      position: {x: -0.07199478, y: -1.3142904, z: -0.024326934}
+      rotation: {x: 0, y: 0, z: -0.043619346, w: 0.99904823}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object447
+      parentName: mirrors
+      position: {x: -0.07199478, y: -1.3142904, z: -0.024326934}
+      rotation: {x: 0, y: 0, z: -0.043619346, w: 0.99904823}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object446
+      parentName: mirrors
+      position: {x: -0.07199478, y: -1.3142904, z: -0.024326934}
+      rotation: {x: 0, y: 0, z: -0.043619346, w: 0.99904823}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body
+      parentName: 1
+      position: {x: 0.054557037, y: -0.00000030517577, z: 0.3207579}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane018
+      parentName: body
+      position: {x: -2.6500144, y: -0.00000015258789, z: 0.73148865}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object379
+      parentName: body
+      position: {x: -0.4718634, y: -0.37964106, z: -0.2564801}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane020
+      parentName: body
+      position: {x: 2.9209034, y: 0.03477112, z: -0.19801818}
+      rotation: {x: 0, y: 0.0114149945, z: -0, w: 0.99993485}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box064
+      parentName: body
+      position: {x: 2.881497, y: -0.88471633, z: -0.1765338}
+      rotation: {x: 0.03272235, y: 0.03265868, z: 0.70566267, w: 0.7070381}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane021
+      parentName: body
+      position: {x: 3.0868301, y: -0.00000015258789, z: -0.94555515}
+      rotation: {x: 0.5, y: 0.50000006, z: 0.5, w: 0.4999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane019
+      parentName: body
+      position: {x: 3.054476, y: 0.01649353, z: -0.61914444}
+      rotation: {x: 0.23953952, y: 0.23953953, z: 0.66529757, w: 0.6652975}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane023
+      parentName: body
+      position: {x: -0.54965675, y: -0.00000015258789, z: 0.95621383}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object413
+      parentName: body
+      position: {x: 0.20212296, y: -0.008071137, z: 0.79371506}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object380
+      parentName: body
+      position: {x: -4.3282943, y: -0.37964106, z: -0.2564801}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object386
+      parentName: body
+      position: {x: -2.6500144, y: -0.00000015258789, z: 0.73148865}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object412
+      parentName: body
+      position: {x: 2.9209034, y: 0.0051849363, z: -0.19801818}
+      rotation: {x: 0, y: 0.0114149945, z: -0, w: 0.99993485}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object415
+      parentName: body
+      position: {x: -0.4718634, y: -0.37964106, z: -0.2564801}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object411
+      parentName: body
+      position: {x: -2.6500144, y: -0.00000015258789, z: 0.73148865}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder032
+      parentName: body
+      position: {x: -0.44573075, y: -0.00000015258789, z: 0.6592737}
+      rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lights
+      parentName: 1
+      position: {x: -0.009582061, y: 0.0000049591063, z: 0.23272263}
+      rotation: {x: -0.21552278, y: -0.83546865, z: 0.06811984, w: 0.50090104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box072
+      parentName: lights
+      position: {x: 0.6944626, y: -0.5972436, z: 0.6510278}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box073
+      parentName: lights
+      position: {x: 0.7212069, y: -0.0038256072, z: 0.6670636}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box077
+      parentName: lights
+      position: {x: -2.5829735, y: -0.0038256072, z: 0.8443541}
+      rotation: {x: -0, y: 0, z: 1, w: -0.0000000754979}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group069
+      parentName: lights
+      position: {x: 2.9022968, y: -0.78685844, z: -0.4680684}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Circle002
+      parentName: Group069
+      position: {x: 0.05876953, y: -0.00029266358, z: -0.001072998}
+      rotation: {x: 0.49856743, y: 0.49856868, z: 0.5014285, w: 0.50142723}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder031
+      parentName: Group069
+      position: {x: -0.16929626, y: 0, z: 0}
+      rotation: {x: -0, y: 0.70710665, z: 0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object410
+      parentName: Group069
+      position: {x: -0.16929626, y: 0, z: 0}
+      rotation: {x: -0, y: 0.70710665, z: 0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere046
+      parentName: Group069
+      position: {x: 0.049680173, y: -0.07638061, z: 0.05608429}
+      rotation: {x: 0.5, y: 0.50000006, z: 0.5, w: 0.4999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere047
+      parentName: Group069
+      position: {x: 0.049680173, y: 0.081179045, z: 0.050513305}
+      rotation: {x: 0.5, y: 0.50000006, z: 0.5, w: 0.4999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere048
+      parentName: Group069
+      position: {x: 0.049680173, y: -0.00064331054, z: -0.09402115}
+      rotation: {x: 0.5, y: 0.50000006, z: 0.5, w: 0.4999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group067
+      parentName: lights
+      position: {x: 2.972193, y: -0.8410206, z: -0.6716479}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane025
+      parentName: Group067
+      position: {x: 0.15054199, y: 0.84101516, z: -0.13444886}
+      rotation: {x: 0.50687236, y: 0.5086057, z: 0.49434477, w: 0.4899223}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere040
+      parentName: Group067
+      position: {x: 0.00086486817, y: 0.0031410216, z: 0.0314801}
+      rotation: {x: 0.59072345, y: 0.30751106, z: 0.34445414, w: 0.66169035}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere041
+      parentName: Group067
+      position: {x: -0.00619812, y: -0.0018144989, z: -0.032002106}
+      rotation: {x: 0.59072345, y: 0.30751106, z: 0.34445414, w: 0.66169035}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere042
+      parentName: Group067
+      position: {x: 0.041294556, y: 0.06275482, z: -0.01871231}
+      rotation: {x: 0.5476559, y: 0.4308466, z: 0.4306439, w: 0.57357657}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere043
+      parentName: Group067
+      position: {x: -0.04525818, y: -0.062415846, z: 0.018372344}
+      rotation: {x: 0.6619864, y: 0.21755408, z: 0.2084981, w: 0.6862745}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group070
+      parentName: lights
+      position: {x: 2.640562, y: -0.0013373565, z: -0.3433386}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane026
+      parentName: Group070
+      position: {x: 0.00055328367, y: 0.0012957763, z: -0.000014648437}
+      rotation: {x: 0.7010559, y: 0.0925246, z: -0.09206728, w: 0.7010588}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere049
+      parentName: Group070
+      position: {x: -0.04612793, y: -0.9983624, z: 0.013253174}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere050
+      parentName: Group070
+      position: {x: 0.04863861, y: -0.9983624, z: -0.01258728}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane027
+      parentName: lights
+      position: {x: -2.9020305, y: -0.00000541687, z: -0.8470008}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group064
+      parentName: lights
+      position: {x: -3.0067852, y: -0.81506705, z: -0.33447692}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane024
+      parentName: Group064
+      position: {x: 0.015491333, y: 0, z: 0}
+      rotation: {x: 0.0000001685874, y: -0.70710677, z: 0.00000016858739, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shape003
+      parentName: Group064
+      position: {x: 0.015491333, y: 0, z: 0}
+      rotation: {x: 0.0000001685874, y: -0.70710677, z: 0.00000016858739, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shape004
+      parentName: Group064
+      position: {x: 0.015491333, y: 0, z: 0}
+      rotation: {x: 0.0000001685874, y: -0.70710677, z: 0.00000016858739, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: buttom
+      parentName: 1
+      position: {x: 0.07925507, y: 0.053529777, z: -0.48918182}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group065
+      parentName: buttom
+      position: {x: 2.122068, y: -0.6106403, z: -0.08630745}
+      rotation: {x: 0.0578629, y: -0.15034945, z: 0.10501793, w: 0.9813349}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box069
+      parentName: Group065
+      position: {x: -0.033900756, y: -0.24978374, z: -0.4287152}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder034
+      parentName: Group065
+      position: {x: -0.056651305, y: -0.27637166, z: 0.4333796}
+      rotation: {x: -0.0000000754979, y: 1, z: 0.0000000754979, w: -5.6999333e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Helix003
+      parentName: Group065
+      position: {x: -0.051243894, y: -0.2754021, z: -0.25843048}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object417
+      parentName: Group065
+      position: {x: -0.031219786, y: 0.030124664, z: -0.37569976}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object418
+      parentName: Group065
+      position: {x: 0.082179256, y: -0.22606418, z: -0.36892515}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box070
+      parentName: buttom
+      position: {x: 1.9095323, y: -0.19167045, z: -0.40789962}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group066
+      parentName: buttom
+      position: {x: -1.8081123, y: -0.6106403, z: -0.08630745}
+      rotation: {x: 0.052047826, y: -0.10880405, z: 0.07826506, w: 0.9896097}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box071
+      parentName: Group066
+      position: {x: -0.033900756, y: -0.24978374, z: -0.4287152}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder036
+      parentName: Group066
+      position: {x: -0.056651305, y: -0.27637166, z: 0.4333796}
+      rotation: {x: -0.0000000754979, y: 1, z: 0.0000000754979, w: -5.6999333e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Helix004
+      parentName: Group066
+      position: {x: -0.051243894, y: -0.2754021, z: -0.25843048}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object419
+      parentName: Group066
+      position: {x: -0.031219786, y: 0.030124664, z: -0.37569976}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object420
+      parentName: Group066
+      position: {x: 0.082179256, y: -0.22606418, z: -0.36892515}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder035
+      parentName: buttom
+      position: {x: 0.62421155, y: 0.69147277, z: -0.34562072}
+      rotation: {x: -0, y: -0.70710665, z: 0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Line011
+      parentName: buttom
+      position: {x: -1.9843366, y: 0.6810428, z: -0.35142303}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: back tires
+      parentName: fbx(Clone)
+      position: {x: -1.7349362, y: -1.1135901, z: -0.951225}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object570
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: -0.12160906, y: 0.71240944, z: -0.6792772, w: -0.12754036}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object546
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: -0.40707734, y: 0.58439887, z: -0.55722076, w: -0.4269322}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object548
+      parentName: back tires
+      position: {x: -0.00034332275, y: -0.08829025, z: -0.036297377}
+      rotation: {x: 0.6311493, y: -0.29263803, z: 0.27902818, w: 0.6619342}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object550
+      parentName: back tires
+      position: {x: -0.023064269, y: -0.08829025, z: -0.028913422}
+      rotation: {x: 0.6864832, y: -0.07376665, z: 0.07033597, w: 0.71996677}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object552
+      parentName: back tires
+      position: {x: -0.037105408, y: -0.08829025, z: -0.009584808}
+      rotation: {x: 0.67461956, y: 0.1523258, z: -0.1452417, w: 0.70752394}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object554
+      parentName: back tires
+      position: {x: -0.034584656, y: -0.08829025, z: 0.014305801}
+      rotation: {x: 0.5967191, y: 0.3635075, z: -0.346602, w: 0.62582403}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object556
+      parentName: back tires
+      position: {x: -0.023060607, y: -0.08829025, z: 0.027196579}
+      rotation: {x: 0.46040696, y: 0.5391072, z: -0.51403475, w: 0.48286355}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object558
+      parentName: back tires
+      position: {x: -0.00033905028, y: -0.08829025, z: 0.034577712}
+      rotation: {x: 0.2790283, y: 0.66193384, z: -0.6311498, w: 0.29263762}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object560
+      parentName: back tires
+      position: {x: 0.022381896, y: -0.08829025, z: 0.027193831}
+      rotation: {x: 0.070335485, y: 0.7199668, z: -0.6864833, w: 0.07376636}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object562
+      parentName: back tires
+      position: {x: 0.03437897, y: -0.08829025, z: 0.014301528}
+      rotation: {x: -0.1452417, y: 0.7075242, z: -0.6746194, w: -0.15232602}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object564
+      parentName: back tires
+      position: {x: 0.036421813, y: -0.08829025, z: -0.009589004}
+      rotation: {x: -0.3466018, y: 0.6258239, z: -0.59671915, w: -0.3635078}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object566
+      parentName: back tires
+      position: {x: 0.022378234, y: -0.08829025, z: -0.02891609}
+      rotation: {x: 0.5140345, y: -0.48286396, z: 0.46040753, w: 0.53910655}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object568
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: -0.27129632, y: 0.66546005, z: -0.63451135, w: -0.2845287}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object596
+      parentName: back tires
+      position: {x: 0.000044250486, y: -0.19303848, z: 0.000035858153}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object572
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.034311995, y: 0.72284085, z: -0.68922335, w: 0.035985876}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object574
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.18847379, y: 0.69621956, z: -0.66384006, w: 0.19766723}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object576
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.33297494, y: 0.63391006, z: -0.6044284, w: 0.34921637}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object578
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.4604074, y: 0.5391068, z: -0.51403373, w: 0.48286462}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object580
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.56424, y: 0.41666836, z: -0.39729008, w: 0.59176123}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object582
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.6391495, y: 0.2728716, z: -0.26018083, w: 0.67032456}
+      scale: {x: 1.055, y: 1.055, z: 1.055001}
+    - name: Object584
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.68129605, y: 0.11508786, z: -0.1097351, w: 0.7145269}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object586
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.68851966, y: -0.048595265, z: 0.04633556, w: 0.72210264}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object588
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.66044974, y: -0.20978752, z: 0.20003118, w: 0.6926636}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object590
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.5985253, y: -0.36022598, z: 0.3434729, w: 0.627719}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object592
+      parentName: back tires
+      position: {x: -0.00021697997, y: -0.04308304, z: 0.00055473327}
+      rotation: {x: 0.50592077, y: -0.49219936, z: 0.46930888, w: 0.53059703}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object544
+      parentName: back tires
+      position: {x: 0.000044250486, y: -0.00000015258789, z: 0.000035858153}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object594
+      parentName: back tires
+      position: {x: 0.000038757324, y: 0.000026092528, z: 0.53467286}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object622
+      parentName: back tires
+      position: {x: -0.92722106, y: 2.3274348, z: 1.85436}
+      rotation: {x: 0, y: 0, z: 1, w: 0.00000019470718}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object597
+      parentName: back tires
+      position: {x: -0.92722654, y: 2.327461, z: 1.319723}
+      rotation: {x: 0.00000013767878, y: 0.7071068, z: 0.7071067, w: 0.00000013767875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object598
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.5843989, y: -0.40707722, z: -0.42693228, w: 0.55722064}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object599
+      parentName: back tires
+      position: {x: -0.926839, y: 2.4157512, z: 1.2833898}
+      rotation: {x: 0.29263818, y: 0.63114923, z: 0.66193426, w: -0.27902806}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object600
+      parentName: back tires
+      position: {x: -0.904118, y: 2.4157512, z: 1.2907737}
+      rotation: {x: 0.0737668, y: 0.6864832, z: 0.71996677, w: -0.07033586}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object601
+      parentName: back tires
+      position: {x: -0.8900769, y: 2.4157512, z: 1.3101023}
+      rotation: {x: -0.15232567, y: 0.6746197, z: 0.7075239, w: 0.14524184}
+      scale: {x: 1.055, y: 1.055, z: 1.055001}
+    - name: Object602
+      parentName: back tires
+      position: {x: -0.8925976, y: 2.4157512, z: 1.3339928}
+      rotation: {x: -0.3635074, y: 0.59671915, z: 0.6258239, w: 0.34660217}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object603
+      parentName: back tires
+      position: {x: -0.9041217, y: 2.4157512, z: 1.3468838}
+      rotation: {x: -0.53910714, y: 0.46040702, z: 0.4828635, w: 0.51403475}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object604
+      parentName: back tires
+      position: {x: -0.9268432, y: 2.4157512, z: 1.3542649}
+      rotation: {x: -0.661934, y: 0.27902797, z: 0.29263738, w: 0.6311498}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object605
+      parentName: back tires
+      position: {x: -0.94956416, y: 2.4157512, z: 1.346881}
+      rotation: {x: -0.7199668, y: 0.07033554, z: 0.07376631, w: 0.6864833}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object606
+      parentName: back tires
+      position: {x: -0.96156126, y: 2.4157512, z: 1.3339887}
+      rotation: {x: -0.7075242, y: -0.14524163, z: -0.15232606, w: 0.6746193}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object607
+      parentName: back tires
+      position: {x: -0.9636041, y: 2.4157512, z: 1.3100983}
+      rotation: {x: -0.625824, y: -0.34660172, z: -0.36350793, w: 0.596719}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object608
+      parentName: back tires
+      position: {x: -0.9495605, y: 2.4157512, z: 1.2907711}
+      rotation: {x: 0.48286402, y: 0.5140345, z: 0.5391065, w: -0.46040753}
+      scale: {x: 1.055001, y: 1.055, z: 1.055}
+    - name: Object609
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.66546005, y: -0.27129635, z: -0.28452867, w: 0.63451135}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object610
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.7124095, y: -0.121608905, z: -0.12754051, w: 0.6792771}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object611
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.72284085, y: 0.034312125, z: 0.03598573, w: 0.68922335}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object612
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.69621956, y: 0.18847382, z: 0.19766715, w: 0.66384006}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object613
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.6339101, y: 0.33297485, z: 0.34921598, w: 0.60442865}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object614
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.5391067, y: 0.46040747, z: 0.48286405, w: 0.5140343}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object615
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.4166683, y: 0.56424004, z: 0.5917612, w: 0.39729014}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object616
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.27287164, y: 0.63914955, z: 0.6703245, w: 0.26018083}
+      scale: {x: 1.055, y: 1.055, z: 1.055001}
+    - name: Object617
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: -0.11508789, y: 0.681296, z: 0.71452695, w: 0.10973506}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object618
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: 0.04859524, y: 0.68851966, z: 0.72210264, w: -0.0463356}
+      scale: {x: 1.054999, y: 1.055, z: 1.055}
+    - name: Object619
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: 0.20978746, y: 0.66044974, z: 0.6926636, w: -0.20003118}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object620
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: 0.360226, y: 0.5985252, z: 0.627719, w: -0.343473}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object621
+      parentName: back tires
+      position: {x: -0.9269653, y: 2.370544, z: 1.3202419}
+      rotation: {x: 0.4921998, y: 0.50592023, z: 0.53059745, w: -0.46930847}
+      scale: {x: 1.055, y: 1.055, z: 1.055}
+    - name: Object623
+      parentName: back tires
+      position: {x: -0.92722654, y: 2.5204995, z: 1.319723}
+      rotation: {x: 0.00000013767878, y: 0.7071068, z: 0.7071067, w: 0.00000013767875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: front tires
+      parentName: fbx(Clone)
+      position: {x: 2.191776, y: -1.1135901, z: -0.951225}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object
+      parentName: front tires
+      position: {x: 0.00004455566, y: -0.00000015258789, z: 0.000035858153}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object534
+      parentName: front tires
+      position: {x: 0.0000390625, y: 0.000026092528, z: 0.53467286}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object536
+      parentName: front tires
+      position: {x: 0.00004455566, y: -0.19303848, z: 0.000035858153}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object538
+      parentName: front tires
+      position: {x: -0.0002166748, y: -0.14459197, z: 0.00055473327}
+      rotation: {x: -0.40707782, y: 0.58439827, z: -0.55722106, w: -0.42693213}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object540
+      parentName: front tires
+      position: {x: 0.00004455566, y: -0.19827713, z: 0.000035858153}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object542
+      parentName: front tires
+      position: {x: 0.00004455566, y: -0.19827713, z: 0.000035858153}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: elements
+      parentName: fbx(Clone)
+      position: {x: 0.031378936, y: 0.06457703, z: 0.2819232}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box068
+      parentName: elements
+      position: {x: 1.5018499, y: -0.4373018, z: 0.055954892}
+      rotation: {x: 0.097674176, y: 0.111091234, z: 0.34725857, w: 0.92602915}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group068
+      parentName: elements
+      position: {x: 3.076283, y: -0.74640083, z: -0.7996432}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere044
+      parentName: Group068
+      position: {x: -0.004100952, y: 0.0040068435, z: -0.04950409}
+      rotation: {x: 0.62721133, y: 0.32650548, z: 0.32650554, w: 0.62721145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere045
+      parentName: Group068
+      position: {x: -0.004100952, y: 0.0040068435, z: 0.0316156}
+      rotation: {x: 0.62721133, y: 0.32650548, z: 0.32650554, w: 0.62721145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torus006
+      parentName: Group068
+      position: {x: -0.0040460206, y: 0.0031825255, z: 0}
+      rotation: {x: 0.21263109, y: 0.67437965, z: -0.21263102, w: 0.6743798}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torus005
+      parentName: elements
+      position: {x: 3.1135743, y: -0.06457741, z: -1.0015087}
+      rotation: {x: -0.0000000754979, y: 1, z: -0.0000012358042, w: 9.3300625e-14}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object416
+      parentName: elements
+      position: {x: 3.0961828, y: 0.22124687, z: -0.8072919}
+      rotation: {x: -0, y: 0.7071067, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object390
+      parentName: elements
+      position: {x: 0.15864624, y: -1.0957859, z: -1.1500359}
+      rotation: {x: 0.5000001, y: -0.5, z: -0.49999988, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box076
+      parentName: elements
+      position: {x: 1.1919388, y: -1.0718089, z: -0.641946}
+      rotation: {x: 0.6882961, y: -0.000000005357267, z: -0.0000000056462923, w: 0.7254299}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Line009
+      parentName: elements
+      position: {x: -0.2346801, y: -0.8738654, z: 0.5670999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box067
+      parentName: elements
+      position: {x: -2.6393268, y: -0.91109073, z: 0.3562033}
+      rotation: {x: 0.5990899, y: 0.00007541642, z: 0.00010079384, w: 0.80068177}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object444
+      parentName: elements
+      position: {x: 0.38731143, y: -1.0735157, z: -0.23542327}
+      rotation: {x: -0.0014876807, y: -0.7069256, z: 0.7072849, w: 0.0014884985}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object445
+      parentName: elements
+      position: {x: 0.38731143, y: -1.0735157, z: -0.23542327}
+      rotation: {x: -0.0014876807, y: -0.7069256, z: 0.7072849, w: 0.0014884985}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object414
+      parentName: elements
+      position: {x: -0.45828512, y: -0.55227673, z: 1.1174383}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Line010
+      parentName: elements
+      position: {x: -2.751355, y: -0.41583878, z: 0.7085599}
+      rotation: {x: -0.31252396, y: 0.312524, z: -0.6342941, w: 0.63429374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object475
+      parentName: elements
+      position: {x: -3.053717, y: 0.19103599, z: -0.23646697}
+      rotation: {x: 0.5011784, y: 0.49907348, z: 0.49882, w: 0.5009237}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object434
+      parentName: elements
+      position: {x: -3.0386944, y: -0.06700569, z: -0.36394745}
+      rotation: {x: -0.49999985, y: 0.5, z: 0.50000024, w: -0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box078
+      parentName: elements
+      position: {x: -3.0303721, y: -0.44739538, z: -0.46669158}
+      rotation: {x: 0.48669872, y: -0.48669893, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torus004
+      parentName: elements
+      position: {x: -3.0337877, y: -0.06458, z: -0.90519917}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group061
+      parentName: elements
+      position: {x: -3.0911047, y: -0.06498481, z: -0.9618575}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object388
+      parentName: Group061
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object389
+      parentName: Group061
+      position: {x: 0.051272582, y: 0.00039451598, z: -0.019442596}
+      rotation: {x: 0, y: -0.5735765, z: -0, w: 0.819152}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object436
+      parentName: Group061
+      position: {x: 0.073473506, y: -0.35473195, z: 0.042419128}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object437
+      parentName: Group061
+      position: {x: 0.073473506, y: -0.32420546, z: 0.042419128}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object438
+      parentName: Group061
+      position: {x: 0.0735437, y: -0.35473195, z: 0.0051052854}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object439
+      parentName: Group061
+      position: {x: 0.0735437, y: -0.32420546, z: 0.0051052854}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object440
+      parentName: Group061
+      position: {x: 0.07357849, y: 0.32244062, z: 0.042413633}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object441
+      parentName: Group061
+      position: {x: 0.07357849, y: 0.3529672, z: 0.042413633}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object442
+      parentName: Group061
+      position: {x: 0.07356079, y: 0.32244062, z: 0.0051045227}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object443
+      parentName: Group061
+      position: {x: 0.07356079, y: 0.3529672, z: 0.0051045227}
+      rotation: {x: 0.48669875, y: -0.48669896, z: -0.51295644, w: 0.5129563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane022
+      parentName: Group061
+      position: {x: -0.014151611, y: 0.00056541443, z: -0.031362608}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder033
+      parentName: elements
+      position: {x: -3.0396593, y: -1.0607741, z: -0.9911356}
+      rotation: {x: 0.6349764, y: -0.31571832, z: -0.31390935, w: 0.6313382}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box074
+      parentName: elements
+      position: {x: -2.641989, y: 0.91628075, z: 0.3505606}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere039
+      parentName: elements
+      position: {x: -2.5474303, y: -1.0598736, z: -0.7199643}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object435
+      parentName: elements
+      position: {x: 2.800481, y: -1.0846012, z: -0.74548084}
+      rotation: {x: 0.6839709, y: 0.07704093, z: 0.08119731, w: 0.7208713}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box066
+      parentName: elements
+      position: {x: -2.6132257, y: -1.0531783, z: -0.49498686}
+      rotation: {x: 0.70747644, y: 0.0003736162, z: 0.00037322578, w: 0.70673674}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object387
+      parentName: elements
+      position: {x: -2.605119, y: -0.06457741, z: 0.77032316}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object391
+      parentName: elements
+      position: {x: -0.6288385, y: -1.0072736, z: -0.97329193}
+      rotation: {x: 0.87576973, y: -0.000000006816443, z: -0.00000000375726, w: 0.4827291}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -95,9 +1082,9 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

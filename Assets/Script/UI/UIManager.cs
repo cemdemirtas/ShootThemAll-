@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
-public class UIManager : MonoBehaviour
+public class UIManager : SingletonPersistant<UIManager>
 {
-    public static UIManager instance;
+    //public static UIManager instance;
     public static UnityAction UpgradePanelEvent;
     public static UnityAction KillEvent;
 
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] Image _killSlider;
     [SerializeField] Image _moneyImage;
+    [SerializeField] TextMeshProUGUI _LevelIndexText;
+    [SerializeField] public Transform _gameUI;
 
 
     [SerializeField] public float _panelCount;
@@ -20,16 +23,10 @@ public class UIManager : MonoBehaviour
 
 
     [SerializeField] LevelSO _levelSO;
-    private void Awake()
-    {
 
-        if (instance==null)
-        {
-            instance = this;
-        }
-    }
     private void OnEnable()
     {
+        _LevelIndexText.text = "Level: " + _levelSO.LevelIndex;
         KillEvent += PanelCount;
         KillEvent += KillCount;
         UpgradePanelEvent += UpgradePanelShow;
@@ -64,6 +61,12 @@ public class UIManager : MonoBehaviour
     {
         _killCount++;
         _killSlider.fillAmount = (_killCount / _levelSO.LevelIndex * 10)/100;
-        Debug.Log(_killSlider.fillAmount);
+        if (_killSlider.fillAmount == 1)
+        {
+            GameManager.Instance.gamestate = GameManager.GameState.Next;
+            _levelSO.LevelIndex++;
+            _LevelIndexText.text = "Level: "+_levelSO.LevelIndex;
+            _killCount = 0;
+        }
     }
 }
