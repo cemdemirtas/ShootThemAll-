@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UpgradeMechanics : MonoBehaviour
 {
     Shoot _shoot;
     [SerializeField] UpgradeSO _upgradeSO;
+
 
 
     [SerializeField] ParticleSystem BulletSpeedParticle;
@@ -28,5 +30,13 @@ public class UpgradeMechanics : MonoBehaviour
         BulletCountParticle.Play();
         if (_upgradeSO.BulletCount >= 2) return;
         _upgradeSO.BulletCount++;
+    } 
+    public void UpgradeMissileCount()
+    {
+        UIManager.Instance.UpgradePanelHide();
+        //BulletCountParticle.Play();
+        _upgradeSO.MissileCount++;
+        Shoot.MissileBuildEvent?.Invoke();
+       
     }
 }

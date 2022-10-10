@@ -5,9 +5,12 @@ using UnityEngine;
 public class BulletHit : MonoBehaviour, IInterract
 {
     EnemyAl _enemyAl;
-    private void Start()
+    ClosestEnemy _closestEnemy;
+    [SerializeField] Transform _missile;
+    private void Awake()
     {
         _enemyAl = new EnemyAl();
+        _closestEnemy = new ClosestEnemy();
     }
     //ShootingManager _shootingManager;
     //public BulletHit(ShootingManager shootingManager)
@@ -18,12 +21,12 @@ public class BulletHit : MonoBehaviour, IInterract
     {
         gameObject.SetActive(false);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.TryGetComponent(out IInterract intr)) //require enemy components
         {
             StartCoroutine(SpawnObject());
-
         }
       
 

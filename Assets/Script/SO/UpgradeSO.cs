@@ -9,6 +9,7 @@ public class UpgradeSO : ScriptableObject
 
     [SerializeField] public float BulletForwardSpeed;
     [SerializeField] public int BulletCount;
+    [SerializeField] public int MissileCount;
     [SerializeField] public int Health;
 
     
