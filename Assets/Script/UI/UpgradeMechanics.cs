@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,11 @@ public class UpgradeMechanics : MonoBehaviour
 {
     Shoot _shoot;
     [SerializeField] UpgradeSO _upgradeSO;
+
+
+    [SerializeField] ParticleSystem BulletSpeedParticle;
+    [SerializeField] ParticleSystem BulletCountParticle;
+    [SerializeField] ParticleSystem HealthParticle;
     private void OnEnable()
     {
         _shoot = new Shoot();
@@ -14,10 +20,12 @@ public class UpgradeMechanics : MonoBehaviour
     {
         _upgradeSO.BulletForwardSpeed = _upgradeSO.BulletForwardSpeed + 10;
         UIManager.Instance.UpgradePanelHide();
+        BulletSpeedParticle.Play();
     }
     public void UpgradeFireCount()
     {
         UIManager.Instance.UpgradePanelHide();
+        BulletCountParticle.Play();
         if (_upgradeSO.BulletCount >= 2) return;
         _upgradeSO.BulletCount++;
     }
