@@ -5,8 +5,9 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-public class UIManager : SingletonPersistant<UIManager>
+public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance;
     //public static UIManager instance;
     public static UnityAction UpgradePanelEvent;
     public static UnityAction KillEvent;
@@ -23,7 +24,10 @@ public class UIManager : SingletonPersistant<UIManager>
 
 
     [SerializeField] LevelSO _levelSO;
-
+    private void Awake()
+    {
+        if (Instance == null) { Instance = this; }
+    }
     private void OnEnable()
     {
         _LevelIndexText.text = "Level: " + _levelSO.LevelIndex;

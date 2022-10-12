@@ -201,6 +201,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 6577974}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6577976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 6577974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6577978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 6577979}
+--- !u!114 &6577979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &18805292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,6 +509,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 258049575}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &258049577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 258049575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &258049579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258049577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 258049580}
+--- !u!114 &258049580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258049577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &293599390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,6 +634,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 293599390}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &293599392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 293599390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &293599394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293599392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 293599395}
+--- !u!114 &293599395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293599392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &479054369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1264,6 +1405,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 742241290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &742241292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 742241290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &742241294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742241292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 742241295}
+--- !u!114 &742241295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742241292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &742286320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1342,6 +1530,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 742286320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &742286322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 742286320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &742286324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742286322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 742286325}
+--- !u!114 &742286325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742286322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &744495194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1481,6 +1716,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 795707524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &795707526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 795707524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &795707528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795707526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 795707529}
+--- !u!114 &795707529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795707526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &822603022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1800,6 +2082,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 1381739055}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1381739057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 1381739055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1381739059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381739057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 1381739060}
+--- !u!114 &1381739060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381739057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &1453651105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2064,6 +2393,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 1639471330}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1639471332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 1639471330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1639471334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639471332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 1639471335}
+--- !u!114 &1639471335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639471332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1 &1715157790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3482779826659871954, guid: dfe30401a4b8fe54a92eeb9f7d55aea5, type: 3}
@@ -2187,6 +2563,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 1848765612}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1848765614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 1848765612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1848765616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848765614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 1848765617}
+--- !u!114 &1848765617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848765614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1001 &1863866732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2566,7 +2989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9deea68aac80e34468894a32711ad349, type: 3}
@@ -2575,6 +2998,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8631677085094134113, guid: 9deea68aac80e34468894a32711ad349, type: 3}
   m_PrefabInstance: {fileID: 2058510004}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2058510006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
+  m_PrefabInstance: {fileID: 2058510004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2058510008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058510006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot: {fileID: 2058510009}
+--- !u!114 &2058510009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058510006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
+  Bullet_Emitter: {fileID: 0}
+  Bullet: {fileID: 3315278711733701333, guid: fd87f77b564fdda4f8c7d6ebaca388c1, type: 3}
+  Bullet_Forward_Force: 12
+  enemy: {fileID: 0}
+  _bulletType: 
+  _missileList:
+  - {fileID: 2058510005}
+  - {fileID: 742286321}
+  - {fileID: 795707525}
+  - {fileID: 1848765613}
+  - {fileID: 6577975}
+  - {fileID: 258049576}
+  - {fileID: 742241291}
+  - {fileID: 293599391}
+  - {fileID: 1381739056}
+  - {fileID: 1639471331}
 --- !u!1 &919132149189318931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1723578198681830549, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
@@ -2607,6 +3077,10 @@ PrefabInstance:
     - target: {fileID: 1723578198681830549, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
       propertyPath: m_Name
       value: stickManModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723578198681830558, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1723578198681830558, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
       propertyPath: _missileList.Array.size
@@ -2696,7 +3170,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1723578198681830559, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
+    - {fileID: 1723578198681830558, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
 --- !u!1001 &3482779827355887340
 PrefabInstance:

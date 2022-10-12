@@ -14,9 +14,10 @@ public class UpgradeMechanics : MonoBehaviour
     [SerializeField] ParticleSystem BulletSpeedParticle;
     [SerializeField] ParticleSystem BulletCountParticle;
     [SerializeField] ParticleSystem HealthParticle;
-    private void OnEnable()
+    private void Awake()
     {
-        _shoot = new Shoot();
+        //DontDestroyOnLoad(this);
+        //_shoot = new Shoot();
     }
     public void UpgradeFireRate()
     {
@@ -36,7 +37,7 @@ public class UpgradeMechanics : MonoBehaviour
         UIManager.Instance.UpgradePanelHide();
         //BulletCountParticle.Play();
         _upgradeSO.MissileCount++;
-        Shoot.MissileBuildEvent?.Invoke();
-       
+        Shoot.Instance.MissileBuildEvent?.Invoke();
+        //Shoot.Instance.AddMissile();
     }
 }

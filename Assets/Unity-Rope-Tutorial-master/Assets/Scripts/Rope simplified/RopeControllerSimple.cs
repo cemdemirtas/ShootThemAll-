@@ -28,7 +28,10 @@ public class RopeControllerSimple : MonoBehaviour
     //The joint we use to approximate the rope
     SpringJoint springJoint;
 
-
+    private void Awake()
+    {
+        //whatTheRopeIsConnectedTo = GameObject.Find("stickManModel").transform;
+    }
 
     void Start() 
 	{

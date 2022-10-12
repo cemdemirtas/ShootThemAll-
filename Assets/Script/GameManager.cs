@@ -4,11 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager :SingletonPersistant<GameManager> 
+public class GameManager :MonoBehaviour
 {
+    public static GameManager Instance;
     public GameObject StartP, InGameP, NextP, GameOverP;
     public float countdown = 2.0f;
     [SerializeField] private int asynSceneIndex = 1;
+
+
+    private void Awake()
+    {
+        if(Instance==null) { Instance = this; }
+    }
     public enum GameState // we arrange state and panels
     {
         Start,
