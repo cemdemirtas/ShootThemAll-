@@ -11377,7 +11377,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6998833517616245966}
         m_TargetAssemblyTypeName: UpgradeMechanics, Assembly-CSharp
-        m_MethodName: UpgradeFireCount
+        m_MethodName: UpgradeMissileCount
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

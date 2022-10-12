@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ShootingManager : MonoBehaviour
 {
@@ -26,9 +27,11 @@ public class ShootingManager : MonoBehaviour
     {
         if (closestEnemy == null) return;
         closestEnemy.GetNearestEnemy(this);
+        Transform x = closestEnemy.nearestEnemy;
         if (Input.GetKeyDown(KeyCode.X) && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 30)
         {
-            Shoot.Fire(this, closestEnemy.nearestEnemy);
+            Shoot.Fire(this, x);
+
         }
 
 

@@ -1522,8 +1522,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2062843869853752879}
-  - component: {fileID: 1723578198681830559}
-  - component: {fileID: 1723578198681830558}
   - component: {fileID: 1723578198681830545}
   - component: {fileID: 1723578198681830544}
   - component: {fileID: 1723578198681830547}
@@ -1556,37 +1554,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1723578198681830559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723578198681830549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17dcc6278fd495044a716c610dffe918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shoot: {fileID: 1723578198681830558}
---- !u!114 &1723578198681830558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723578198681830549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16de0e5870e75764ca8539f7fb8cd0ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
-  Bullet_Emitter: {fileID: 7624298704330966282}
-  Bullet: {fileID: 3717778580874489149}
-  Bullet_Forward_Force: 1
-  enemy: {fileID: 5422257288767977359, guid: 35a17316643f5f842bdfab92d811c607, type: 3}
-  _bulletType: 
 --- !u!114 &1723578198681830545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10f4440faca2384788f0d16bfd0ed5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
+  moveSpeed: 5
   joystick: {fileID: 0}
 --- !u!136 &1723578198681830544
 CapsuleCollider:
@@ -3069,6 +3036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c206c9f0bead2fd4390e35bd46a94b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _missile: {fileID: 0}
 --- !u!1 &3755550280876432482
 GameObject:
   m_ObjectHideFlags: 0

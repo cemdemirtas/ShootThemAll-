@@ -15,15 +15,16 @@ public class Shoot : MonoBehaviour
     [SerializeField] private float Bullet_Forward_Force;
     [SerializeField] public Transform enemy;
     ShootingManager _shootingManager;
+    ClosestEnemy _closestEnemy;
     [SerializeField] string _bulletType;
 
     [SerializeField] List<Transform> _missileList;
 
     GameManager gameManager;
-    public void Initiliaze(ShootingManager shootingManager)
-    {
-        _shootingManager = shootingManager;
-    }
+    //public void Initiliaze(ShootingManager shootingManager)
+    //{
+    //    _shootingManager = shootingManager;
+    //}
     private void Awake()
     {
         if (Instance == null) { Instance = this; }
@@ -31,6 +32,14 @@ public class Shoot : MonoBehaviour
         _bulletType = ((UpgradeSO.bulletTypeEnum)_upgradeSO.BulletCount).ToString();
             AddMissile();
             MissileBuildEvent += AddMissile;
+        _closestEnemy = new ClosestEnemy();
+        _shootingManager = new ShootingManager();
+
+    }
+    private void Update()
+    {
+        //if (_closestEnemy.nearestEnemy == null) return;
+        //_closestEnemy.GetNearestEnemy(_shootingManager);
 
     }
     public void Fire(ShootingManager shootingManager, Transform target)
@@ -43,16 +52,18 @@ public class Shoot : MonoBehaviour
 
         Rigidbody Temporary_RigidBody;
         Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody>();
-        transform.LookAt(target);
+        transform.LookAt(target.position);
         Vector3 direction = (Vector3)target.position - Temporary_RigidBody.position;
         direction.Normalize();
-
         Vector3 rotateAmount = Vector3.Cross(direction, transform.forward);
 
-        Temporary_RigidBody.angularVelocity = -rotateAmount * 5;
-
+        Temporary_RigidBody.angularVelocity = -rotateAmount * 5 /** 5*/;
         Temporary_RigidBody.velocity = transform.forward * Bullet_Forward_Force;
 
+        //if (_closestEnemy.nearestEnemy == null) return;
+        //_closestEnemy.GetNearestEnemy(_shootingManager);
+        //Transform getclosestEnemy = _closestEnemy.nearestEnemy;
+        ////transform.LookAt(getclosestEnemy);
 
     }
     public void AddMissile()
@@ -64,4 +75,5 @@ public class Shoot : MonoBehaviour
             _missileList[i].gameObject.SetActive(true);
         }
     }
+
 }
