@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Shoot : MonoBehaviour
 {
-    public  UnityAction MissileBuildEvent;
+    public UnityAction MissileBuildEvent;
     public static Shoot Instance;
 
 
@@ -30,8 +30,8 @@ public class Shoot : MonoBehaviour
         if (Instance == null) { Instance = this; }
 
         _bulletType = ((UpgradeSO.bulletTypeEnum)_upgradeSO.BulletCount).ToString();
-            AddMissile();
-            MissileBuildEvent += AddMissile;
+        AddMissile();
+        MissileBuildEvent += AddMissile;
         _closestEnemy = new ClosestEnemy();
         _shootingManager = new ShootingManager();
 
@@ -52,7 +52,9 @@ public class Shoot : MonoBehaviour
 
         Rigidbody Temporary_RigidBody;
         Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody>();
-        transform.LookAt(target.position);
+        transform.LookAt(target.position, Vector3.up);
+
+        //transform.localScale =new Vector3(0.369836152f, 4.86124659f, 0.379881471f);
         Vector3 direction = (Vector3)target.position - Temporary_RigidBody.position;
         direction.Normalize();
         Vector3 rotateAmount = Vector3.Cross(direction, transform.forward);

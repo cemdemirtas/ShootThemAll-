@@ -17,7 +17,7 @@ public class Player3DExample : MonoBehaviour {
         if (moveVector != Vector3.zero&& joystick!=null)
         {
             transform.rotation = Quaternion.LookRotation(moveVector);
-            transform.Translate(moveVector * moveSpeed * Time.deltaTime, Space.World);
+            transform.Translate(moveVector * moveSpeed * Time.deltaTime, Space.Self);
         }   
 	}
     void shotJoystick()

@@ -23,14 +23,13 @@ public class ShootingManager : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, closestEnemy.OverlapRadius);
 
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (closestEnemy == null) return;
         closestEnemy.GetNearestEnemy(this);
-        Transform x = closestEnemy.nearestEnemy;
         if (Input.GetKeyDown(KeyCode.X) && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 30)
         {
-            Shoot.Fire(this, x);
+            Shoot.Fire(this, closestEnemy.nearestEnemy);
 
         }
 
