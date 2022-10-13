@@ -21,7 +21,7 @@ public class ClosestEnemy
     //    Debug.Log(enemyLayer);
     //}
 
-   public void GetNearestEnemy(ShootingManager shootingManager)
+   public void GetNearestEnemy(Transform transform)
     {
         enemyLayer = LayerMask.NameToLayer("Enemy");
      
@@ -31,11 +31,11 @@ public class ClosestEnemy
             return;
         }
 
-        Collider[] hitColliders = Physics.OverlapSphere(shootingManager.gameObject.transform.position, OverlapRadius, 1 << enemyLayer);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.gameObject.transform.position, OverlapRadius, 1 << enemyLayer);
         float minimumDistance = Mathf.Infinity;
         foreach (Collider collider in hitColliders)
         {
-            float distance = Vector3.Distance(shootingManager.gameObject.transform.position, collider.transform.position);
+            float distance = Vector3.Distance(transform.gameObject.transform.position, collider.transform.position);
             if (distance < minimumDistance)
             {
                 minimumDistance = distance;

@@ -26,10 +26,11 @@ public class ShootingManager : MonoBehaviour
     private void Update()
     {
         if (closestEnemy == null) return;
-        closestEnemy.GetNearestEnemy(this);
+        closestEnemy.GetNearestEnemy(transform);
+        var closest = closestEnemy.nearestEnemy;
         if (Input.GetKeyDown(KeyCode.X) && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 30)
         {
-            Shoot.Fire(this, closestEnemy.nearestEnemy);
+            Shoot.Fire(this, closest);
 
         }
 

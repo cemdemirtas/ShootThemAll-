@@ -1986,6 +1986,7 @@ GameObject:
   - component: {fileID: 5527327673657458814}
   - component: {fileID: 5527327673657458813}
   - component: {fileID: 401137251577519838}
+  - component: {fileID: 8843972789173959918}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Finish
@@ -2061,7 +2062,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!136 &5527327673657458815
 CapsuleCollider:
@@ -2106,7 +2107,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4644454669039037749}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be2896faf0ad54f498e4e9f099be62bc, type: 3}
   m_Name: 
@@ -2154,6 +2155,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8843972789173959918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4644454669039037749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27393ecb4651b54ca9e06f38c44ad18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 5527327673657458752}
+  _size: 10
+  _speed: 10
 --- !u!1 &4724193456154039618
 GameObject:
   m_ObjectHideFlags: 0
