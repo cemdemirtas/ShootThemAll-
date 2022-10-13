@@ -23,7 +23,7 @@ public class ShootingManager : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, closestEnemy.OverlapRadius);
 
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if (closestEnemy == null) return;
         closestEnemy.GetNearestEnemy(this);

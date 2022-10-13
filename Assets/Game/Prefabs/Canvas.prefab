@@ -12955,11 +12955,13 @@ MonoBehaviour:
   _upgradePanel: {fileID: 6998833517616245962}
   _killSlider: {fileID: 6998833518303957454}
   _moneyImage: {fileID: 9115483182903217075}
+  _moneyText: {fileID: 6998833518199891807}
   _LevelIndexText: {fileID: 6998833517196896563}
   _gameUI: {fileID: 3953706977724110751}
   _panelCount: 0
   _killCount: 0
   _levelSO: {fileID: 11400000, guid: 8a8bd24e594a61048a7577140c08d59f, type: 2}
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
 --- !u!1 &6998833518467602943
 GameObject:
   m_ObjectHideFlags: 0

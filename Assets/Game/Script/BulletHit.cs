@@ -30,6 +30,7 @@ public class BulletHit : MonoBehaviour, IInterract
         if (other.transform.TryGetComponent(out IInterract intr)) //require enemy components
         {
             StartCoroutine(SpawnObject());
+            other.transform.GetComponent<CapsuleCollider>().enabled = false;
         }
       
         IEnumerator SpawnObject()
@@ -39,6 +40,7 @@ public class BulletHit : MonoBehaviour, IInterract
             yield return new WaitForSeconds(2f);
             GameObject pooledGameobject = PoolingManager.instance.SpawnFromPool("Enemy", transform.position+ variousPos, Quaternion.identity);
             GameObject Money = PoolingManager.instance.SpawnFromPool("Money", transform.position,  Quaternion.Euler(-90,0,0));
+            pooledGameobject.GetComponent<CapsuleCollider>().enabled = true;
             pooledGameobject.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             interract();

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClosestEnemy 
 {
     ShootingManager _shootingManager;    
-    public float OverlapRadius = 100.0f;
+    public float OverlapRadius = 1000.0f;
 
     public Transform nearestEnemy;
     private int enemyLayer;
@@ -28,7 +28,7 @@ public class ClosestEnemy
 
         if (nearestEnemy != null)
         {
-            nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.green;
+            return;
         }
 
         Collider[] hitColliders = Physics.OverlapSphere(shootingManager.gameObject.transform.position, OverlapRadius, 1 << enemyLayer);

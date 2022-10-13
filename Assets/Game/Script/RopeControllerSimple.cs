@@ -127,7 +127,7 @@ public class RopeControllerSimple : MonoBehaviour
         //B = A;
 
         //Lower control point
-        Vector3 C = D + whatIsHangingFromTheRope.up * ((A - D).magnitude * 0.2f);
+        Vector3 C = D + whatIsHangingFromTheRope.up * ((A - D).magnitude * 0.5f);
 
         //Get the positions
         BezierCurve.GetBezierCurve(A, B, C, D, allRopeSections);
