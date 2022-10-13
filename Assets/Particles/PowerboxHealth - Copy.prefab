@@ -9580,7 +9580,7 @@ GameObject:
   - component: {fileID: 198767938309153172}
   - component: {fileID: 199621546519427832}
   m_Layer: 0
-  m_Name: PowerboxHealth
+  m_Name: PowerboxHealth - Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

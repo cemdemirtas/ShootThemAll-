@@ -11,6 +11,7 @@ public class UpgradeSO : ScriptableObject
     [SerializeField] public int BulletCount;
     [SerializeField] public int MissileCount;
     [SerializeField] public int Health;
+    [SerializeField] public int Money;
 
     
 }

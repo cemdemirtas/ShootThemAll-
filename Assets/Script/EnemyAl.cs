@@ -7,7 +7,7 @@ public class EnemyAl : MonoBehaviour, IInterract
 {
     UIManager UIManager;
     NavMeshAgent nav;
-    private float OverlapRadius = 10;
+    private float OverlapRadius = 100;
     private Transform nearestEnemy;
     private int enemyLayer;
     Animator animator;
@@ -75,14 +75,14 @@ public class EnemyAl : MonoBehaviour, IInterract
         {
             interract();
             //UIManager.instance._killCount++;
-            UIManager.KillEvent?.Invoke();
             //Debug.Log("kill count"+UIManager.instance._killCount);
         }
     }
     IEnumerator Die()
     {
         explosionEffect.Play();
-        yield return new WaitForSeconds(2);
+        UIManager.KillEvent?.Invoke();
+        yield return new WaitForSeconds(0.5f);
         this.gameObject.SetActive(false);
     }
 }

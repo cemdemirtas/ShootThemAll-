@@ -15,7 +15,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] Image _killSlider;
     [SerializeField] Image _moneyImage;
+
+
+    [SerializeField] TextMeshProUGUI _moneyText;
     [SerializeField] TextMeshProUGUI _LevelIndexText;
+
+
     [SerializeField] public Transform _gameUI;
 
 
@@ -24,6 +29,7 @@ public class UIManager : MonoBehaviour
 
 
     [SerializeField] LevelSO _levelSO;
+    [SerializeField] UpgradeSO _upgradeSO;
     private void Awake()
     {
         if (Instance == null) { Instance = this; }
@@ -63,6 +69,8 @@ public class UIManager : MonoBehaviour
     }
     private void KillCount()
     {
+        _upgradeSO.Money += 200;
+        _moneyText.text =""+ _upgradeSO.Money;
         _killCount++;
         _killSlider.fillAmount = (_killCount / _levelSO.LevelIndex * 10)/100;
         if (_killSlider.fillAmount == 1)
