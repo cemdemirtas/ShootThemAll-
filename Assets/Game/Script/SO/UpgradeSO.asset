@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659e2e2e35a02b948b51b3cc01fc177d, type: 3}
   m_Name: UpgradeSO
   m_EditorClassIdentifier: 
-  BulletForwardSpeed: 10
+  BulletForwardSpeed: 12
   BulletCount: 0
-  MissileCount: 7
+  MissileCount: 4
   Health: 100
-  Money: 351000
+  Money: 565800

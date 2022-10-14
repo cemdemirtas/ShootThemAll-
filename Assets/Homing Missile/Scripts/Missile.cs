@@ -113,15 +113,19 @@ public class Missile : MonoBehaviour
     //}
     private void OnTriggerEnter(Collider other)
     {
-        if (_explosionPrefab) Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        //Vector3 otherPos=other.transform.position;
+        GameObject pooledExplosionEffect = PoolingManager.instance.SpawnFromPool("ExplosionEffect", transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity);
+        pooledExplosionEffect.SetActive(true);
+        //if (_explosionPrefab) Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
         if (other.transform.TryGetComponent<IExplode>(out var ex)) ex.Explode();
-
+        StartCoroutine((setFalse(pooledExplosionEffect.transform)));
         //setFalse();
     }
-    IEnumerator setFalse()
+    IEnumerator setFalse(Transform FalseObject)
     {
-        yield return new WaitForSeconds(2.5f);
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        FalseObject.gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
     private void OnDrawGizmos()
     {

@@ -4310,6 +4310,9 @@ MonoBehaviour:
   - type: Money
     prefab: {fileID: 3473397771379260769, guid: 88ad78cf64529d744b5be7d204033912, type: 3}
     size: 20
+  - type: ExplosionEffect
+    prefab: {fileID: 132352, guid: 71b02155078e4bf4e962f302d3675af2, type: 3}
+    size: 20
 --- !u!4 &1492722831
 Transform:
   m_ObjectHideFlags: 0
