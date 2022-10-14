@@ -6,9 +6,10 @@ public class ClosestEnemy
 {
     ShootingManager _shootingManager;    
     public float OverlapRadius = 1000.0f;
-
+    public int count;
     public Transform nearestEnemy;
     private int enemyLayer;
+    List<Transform> colliderList=new List<Transform>();
 
 
     public void Initiliaze(ShootingManager shootingManager)
@@ -35,17 +36,20 @@ public class ClosestEnemy
         float minimumDistance = Mathf.Infinity;
         foreach (Collider collider in hitColliders)
         {
+            colliderList.Add(collider.transform);
+            nearestEnemy = colliderList[Random.Range(0, colliderList.Count)].transform;
             float distance = Vector3.Distance(transform.gameObject.transform.position, collider.transform.position);
             if (distance < minimumDistance)
             {
-                minimumDistance = distance;
-                nearestEnemy = collider.transform;
+
+                //minimumDistance = distance;
+                //nearestEnemy = collider.transform;
 
             }
         }
         if (nearestEnemy != null)
         {
-            nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.red;
+            //nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.red;
             //Debug.Log("Nearest Enemy: " + nearestEnemy + "; Distance: " + minimumDistance);
         }
         else

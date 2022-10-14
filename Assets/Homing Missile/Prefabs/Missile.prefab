@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 184470500350564771}
   - component: {fileID: 265837478554460588}
   - component: {fileID: 4988238155358921513}
+  - component: {fileID: 9028992530683885067}
   m_Layer: 8
   m_Name: Missile
   m_TagString: Bullet
@@ -142,8 +143,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6218341245850011874}
   m_LocalRotation: {x: -0.30342135, y: 0.29422566, z: -0.34232265, w: 0.83915555}
-  m_LocalPosition: {x: 17.56, y: 10.61, z: 18.64}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 17.353, y: 10.5, z: 18.436}
+  m_LocalScale: {x: 0.77903, y: 0.77903, z: 0.77903}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1493051510760732005}
@@ -199,8 +200,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.3, z: 0.3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.45908493, y: 0.6525707, z: 0.3056206}
+  m_Center: {x: -0.079542585, y: -0.019112727, z: 0.0028106659}
 --- !u!82 &4988238155358921513
 AudioSource:
   m_ObjectHideFlags: 0
@@ -297,6 +298,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9028992530683885067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218341245850011874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c206c9f0bead2fd4390e35bd46a94b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _missile: {fileID: 0}
 --- !u!1 &7604778225646678301
 GameObject:
   m_ObjectHideFlags: 0
