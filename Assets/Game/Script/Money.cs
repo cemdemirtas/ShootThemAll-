@@ -15,7 +15,7 @@ public class Money : MonoBehaviour
 
     IEnumerator Destroy()
     {
-        yield return new WaitForSeconds(1.5f);
+        //yield return new WaitForSeconds(1.5f);
         Vector2 vector2 = Camera.main.WorldToScreenPoint(transform.position + Vector3.right * 20);
         transform.DOMove((vector2), 50);
         transform.DOScale(new Vector3(1, 1, 1) * 10, 0.5f);

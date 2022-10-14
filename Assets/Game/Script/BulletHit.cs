@@ -23,7 +23,7 @@ public class BulletHit : MonoBehaviour, IInterract
     }
     private void OnEnable()
     {
-        setFalse();
+       StartCoroutine("setFalse");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -37,18 +37,19 @@ public class BulletHit : MonoBehaviour, IInterract
         {
             float rndmpos= Random.Range(-2f, 2f);
             Vector3 variousPos = new Vector3(rndmpos,1f, rndmpos);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             GameObject pooledGameobject = PoolingManager.instance.SpawnFromPool("Enemy", transform.position+ variousPos, Quaternion.identity);
             GameObject Money = PoolingManager.instance.SpawnFromPool("Money", transform.position,  Quaternion.Euler(-90,0,0));
             pooledGameobject.GetComponent<CapsuleCollider>().enabled = true;
             pooledGameobject.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            interract();
+            //yield return new WaitForSeconds(0.5f);
+            //interract();
+            //setFalse();
         }
     }
     IEnumerator setFalse()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.5f);
         interract();
     }
 }

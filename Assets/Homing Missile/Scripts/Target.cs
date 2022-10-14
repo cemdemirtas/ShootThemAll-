@@ -1,7 +1,7 @@
 using UnityEngine;
 
-namespace Tarodev {
-    public class Target : MonoBehaviour, IExplode {
+    public class Target : MonoBehaviour, IExplode 
+{
         [SerializeField] private Rigidbody _rb;
         [SerializeField] private float _size = 10;
         [SerializeField] private float _speed = 10;
@@ -13,6 +13,6 @@ namespace Tarodev {
             _rb.velocity = dir;
         }
 
-        public void Explode() => Destroy(gameObject);
+        public void Explode() { }
+        //public void Explode() => (gameObject).SetActive(false);
     }
-}

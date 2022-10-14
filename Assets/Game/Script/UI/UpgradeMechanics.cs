@@ -21,7 +21,7 @@ public class UpgradeMechanics : MonoBehaviour
     }
     public void UpgradeFireRate()
     {
-        _upgradeSO.BulletForwardSpeed = _upgradeSO.BulletForwardSpeed + 10;
+        _upgradeSO.BulletForwardSpeed = _upgradeSO.BulletForwardSpeed + 3;
         UIManager.Instance.UpgradePanelHide();
         BulletSpeedParticle.Play();
     }

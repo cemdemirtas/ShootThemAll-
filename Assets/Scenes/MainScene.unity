@@ -495,10 +495,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 663328731423802142, guid: 82662ef1fcf344e4c9ec9b5868fc3374, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6998833517408692106, guid: 82662ef1fcf344e4c9ec9b5868fc3374, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -582,10 +578,6 @@ PrefabInstance:
     - target: {fileID: 6998833517408692106, guid: 82662ef1fcf344e4c9ec9b5868fc3374, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6998833517408692107, guid: 82662ef1fcf344e4c9ec9b5868fc3374, type: 3}
-      propertyPath: m_Camera
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6998833517408692150, guid: 82662ef1fcf344e4c9ec9b5868fc3374, type: 3}
       propertyPath: m_Name

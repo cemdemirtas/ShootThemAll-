@@ -30,8 +30,8 @@ public class Shoot : MonoBehaviour
         if (Instance == null) { Instance = this; }
 
         _bulletType = ((UpgradeSO.bulletTypeEnum)_upgradeSO.BulletCount).ToString();
-        //AddMissile();
-        //MissileBuildEvent += AddMissile;
+        AddMissile();
+        MissileBuildEvent += AddMissile;
         _closestEnemy = new ClosestEnemy();
         _shootingManager = new ShootingManager();
 
@@ -68,14 +68,14 @@ public class Shoot : MonoBehaviour
         ////transform.LookAt(getclosestEnemy);
 
     }
-    //public void AddMissile()
-    //{
-    //    if (GameManager.Instance.gamestate != GameManager.GameState.InGame) return;
+    public void AddMissile()
+    {
+        if (GameManager.Instance.gamestate != GameManager.GameState.InGame) return;
 
-    //    for (int i = 0; i < _upgradeSO.MissileCount; i++)
-    //    {
-    //        _missileList[i].gameObject.SetActive(true);
-    //    }
-    //}
+        for (int i = 0; i < _upgradeSO.MissileCount; i++)
+        {
+            _missileList[i].gameObject.SetActive(true);
+        }
+    }
 
 }

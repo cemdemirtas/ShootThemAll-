@@ -143,8 +143,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6218341245850011874}
   m_LocalRotation: {x: -0.30342135, y: 0.29422566, z: -0.34232265, w: 0.83915555}
-  m_LocalPosition: {x: 17.353, y: 10.5, z: 18.436}
-  m_LocalScale: {x: 0.77903, y: 0.77903, z: 0.77903}
+  m_LocalPosition: {x: 17.143, y: 10.393, z: 18.242}
+  m_LocalScale: {x: 0.5518026, y: 0.5518026, z: 0.5518026}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1493051510760732005}
@@ -166,13 +166,14 @@ MonoBehaviour:
   _rb: {fileID: 184470500350564771}
   _target: {fileID: 0}
   _explosionPrefab: {fileID: 132352, guid: 71b02155078e4bf4e962f302d3675af2, type: 3}
-  _speed: 10
+  _speed: 1
   _rotateSpeed: 1000
   _maxDistancePredict: 100
   _minDistancePredict: 5
   _maxTimePrediction: 5
   _deviationAmount: 50
   _deviationSpeed: 2
+  _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
 --- !u!54 &184470500350564771
 Rigidbody:
   m_ObjectHideFlags: 0
