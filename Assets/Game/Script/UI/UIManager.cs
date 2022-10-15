@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     //public static UIManager instance;
     public static UnityAction UpgradePanelEvent;
-    public static UnityAction KillEvent;
+    public UnityAction KillEvent;
 
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] Image _killSlider;
@@ -70,14 +70,14 @@ public class UIManager : MonoBehaviour
     private void KillCount()
     {
         _upgradeSO.Money += 200;
-        _moneyText.text =""+ _upgradeSO.Money;
+        _moneyText.text = "" + _upgradeSO.Money;
         _killCount++;
-        _killSlider.fillAmount = (_killCount / _levelSO.LevelIndex * 10)/100;
+        _killSlider.fillAmount = (_killCount / _levelSO.LevelIndex * 10) / 100;
         if (_killSlider.fillAmount == 1)
         {
             GameManager.Instance.gamestate = GameManager.GameState.Next;
             _levelSO.LevelIndex++;
-            _LevelIndexText.text = "Level: "+_levelSO.LevelIndex;
+            _LevelIndexText.text = "Level: " + _levelSO.LevelIndex;
             _killCount = 0;
         }
     }

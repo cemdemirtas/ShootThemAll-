@@ -81,7 +81,7 @@ public class EnemyAl : MonoBehaviour, IInterract
     IEnumerator Die()
     {
         explosionEffect.Play();
-        UIManager.KillEvent?.Invoke();
+        UIManager.Instance.KillEvent?.Invoke();
         yield return new WaitForSeconds(0.5f);
         this.gameObject.SetActive(false);
     }

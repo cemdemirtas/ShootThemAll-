@@ -96,6 +96,7 @@ public class GameManager :MonoBehaviour
     {
         PanelController(Panels.InGamep);
         UIManager.Instance._gameUI.gameObject.SetActive(true);
+        Time.timeScale = 1;
 
     }
     void Next()
@@ -103,7 +104,7 @@ public class GameManager :MonoBehaviour
         UIManager.Instance._gameUI.gameObject.SetActive(false);
         PanelController(Panels.Nextp);
         Player3DExample.JoystickEvent?.Invoke();
-
+        Time.timeScale = 0;
     }
     void GameOver()
     {
