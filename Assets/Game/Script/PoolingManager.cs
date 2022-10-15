@@ -20,10 +20,16 @@ public class PoolingManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance==null)
+        {
+            instance = this;
+        }
     }
+
     private void Start()
     {
+
+
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool pool in pools)
@@ -38,6 +44,12 @@ public class PoolingManager : MonoBehaviour
             }
 
             poolDictionary.Add(pool.type, objectPool);
+        }
+        for (int i = 0; i < 15; i++)
+        {
+            GameObject enemy = SpawnFromPool("Enemy", new Vector3(10, 1, 20), Quaternion.identity);
+            enemy.SetActive(true);
+            Debug.Log("Spawned enemy");
         }
     }
 

@@ -35,6 +35,8 @@ public class GameManager :MonoBehaviour
     private void Start()
     {
         gamestate = GameState.Start;
+   
+
     }
     public void Update()
     {

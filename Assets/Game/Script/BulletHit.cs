@@ -23,7 +23,25 @@ public class BulletHit : MonoBehaviour, IInterract
     }
     private void OnEnable()
     {
-       StartCoroutine("setFalse");
+        //StartCoroutine("setFalse");
+    }
+    IEnumerator SpawnObject()
+    {
+        float rndmpos = Random.Range(-2f, 2f);
+        Vector3 variousPos = new Vector3(rndmpos, 1f, rndmpos);
+
+        //yield return new WaitForSeconds(1f);
+        GameObject pooledGameobject = PoolingManager.instance.SpawnFromPool("Enemy", transform.position + variousPos, Quaternion.identity);
+        GameObject Money = PoolingManager.instance.SpawnFromPool("Money", transform.position, Quaternion.Euler(-90, 0, 0));
+        Debug.Log("COLLIDE OKAY");
+
+        pooledGameobject.GetComponent<CapsuleCollider>().enabled = true;
+        pooledGameobject.SetActive(true);
+        //interract();
+        //yield return new WaitForSeconds(0.5f);
+        interract();
+        //StartCoroutine("setFalse");
+        yield return new WaitForSeconds(1f);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -31,20 +49,6 @@ public class BulletHit : MonoBehaviour, IInterract
         {
             StartCoroutine(SpawnObject());
             other.transform.GetComponent<CapsuleCollider>().enabled = false;
-        }
-      
-        IEnumerator SpawnObject()
-        {
-            float rndmpos= Random.Range(-2f, 2f);
-            Vector3 variousPos = new Vector3(rndmpos,1f, rndmpos);
-            yield return new WaitForSeconds(1f);
-            GameObject pooledGameobject = PoolingManager.instance.SpawnFromPool("Enemy", transform.position+ variousPos, Quaternion.identity);
-            GameObject Money = PoolingManager.instance.SpawnFromPool("Money", transform.position,  Quaternion.Euler(-90,0,0));
-            pooledGameobject.GetComponent<CapsuleCollider>().enabled = true;
-            pooledGameobject.SetActive(true);
-            //yield return new WaitForSeconds(0.5f);
-            //interract();
-            //setFalse();
         }
     }
     IEnumerator setFalse()

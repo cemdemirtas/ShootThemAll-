@@ -52,20 +52,26 @@ public class Missile : MonoBehaviour
 
         _closestEnemy.GetNearestEnemy(transform);
         _target = _closestEnemy.nearestEnemy;
-
         _rb.velocity = transform.forward * _upgradeSO.BulletForwardSpeed;
-
-        //var leadTimePercentage = Mathf.InverseLerp(_minDistancePredict, _maxDistancePredict, Vector3.Distance(transform.position, _target.GetComponent<Target>().transform.position));
         var leadTimePercentage = Mathf.InverseLerp(_minDistancePredict, _maxDistancePredict, Vector3.Distance(transform.position, _closestEnemy.nearestEnemy.transform.position));
 
         PredictMovement(leadTimePercentage);
-
         AddDeviation(leadTimePercentage);
-
         RotateRocket();
+
+
+
+        if (_target.gameObject.activeSelf == (false))
+        {
+
+            this.gameObject.SetActive(false);
+        }
+
+
     }
     private void Update()
     {
+
         if (_target == null) return;
         //if (_target.gameObject.active==(false))
         //{

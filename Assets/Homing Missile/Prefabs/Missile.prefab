@@ -168,10 +168,10 @@ MonoBehaviour:
   _explosionPrefab: {fileID: 132352, guid: 71b02155078e4bf4e962f302d3675af2, type: 3}
   _speed: 1
   _rotateSpeed: 1000
-  _maxDistancePredict: 100
-  _minDistancePredict: 5
+  _maxDistancePredict: 250
+  _minDistancePredict: 0
   _maxTimePrediction: 5
-  _deviationAmount: 50
+  _deviationAmount: 1
   _deviationSpeed: 2
   _upgradeSO: {fileID: 11400000, guid: 0b7b27ca991750345ae9f21d8e689334, type: 2}
 --- !u!54 &184470500350564771
@@ -198,11 +198,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6218341245850011874}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.45908493, y: 0.6525707, z: 0.3056206}
-  m_Center: {x: -0.079542585, y: -0.019112727, z: 0.0028106659}
+  m_Size: {x: 0.32313016, y: 0.25322708, z: 0.25208876}
+  m_Center: {x: -0.058130242, y: 0.023231555, z: -0.023955267}
 --- !u!82 &4988238155358921513
 AudioSource:
   m_ObjectHideFlags: 0
