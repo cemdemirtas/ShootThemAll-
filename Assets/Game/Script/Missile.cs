@@ -29,6 +29,7 @@ public class Missile : MonoBehaviour
     [SerializeField] private float _deviationAmount = 50;
     [SerializeField] private float _deviationSpeed = 2;
 
+    private int RandomIndex;
 
 
     [SerializeField] private UpgradeSO _upgradeSO;
@@ -44,7 +45,6 @@ public class Missile : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        int ran = UnityEngine.Random.Range(0, 10);
         if (_closestEnemy.nearestEnemy == null)
         {
             _target = _closestEnemy.nearestEnemy;
@@ -72,7 +72,7 @@ public class Missile : MonoBehaviour
     private void Update()
     {
 
-        if (_target == null) return;
+        //if (_target == null) return;
         //if (_target.gameObject.active==(false))
         //{
         //    _closestEnemy.GetNearestEnemy(transform);
@@ -83,6 +83,7 @@ public class Missile : MonoBehaviour
         if (_closestEnemy == null) return;
         _closestEnemy.GetNearestEnemy(transform);
         _target = _closestEnemy.nearestEnemy;
+        RandomIndex = UnityEngine.Random.Range(0, _closestEnemy.colliderList.Count);
 
 
     }

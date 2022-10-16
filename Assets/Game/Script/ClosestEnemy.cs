@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class ClosestEnemy 
 {
     ShootingManager _shootingManager;    
     public float OverlapRadius = 1000.0f;
     public int count;
+    public int RandomIndex;
     public Transform nearestEnemy;
     private int enemyLayer;
-    List<Transform> colliderList=new List<Transform>();
+    public List<Transform> colliderList=new List<Transform>();
 
 
     public void Initiliaze(ShootingManager shootingManager)
@@ -24,6 +27,7 @@ public class ClosestEnemy
 
    public void GetNearestEnemy(Transform transform)
     {
+        //RandomIndex = Random.Range(0, colliderList.Count);
         enemyLayer = LayerMask.NameToLayer("Enemy");
      
 
@@ -37,7 +41,7 @@ public class ClosestEnemy
         foreach (Collider collider in hitColliders)
         {
             colliderList.Add(collider.transform);
-            nearestEnemy = colliderList[Random.Range(0, colliderList.Count)].transform;
+            nearestEnemy = colliderList[UnityEngine.Random.Range(0, colliderList.Count)].transform;
             float distance = Vector3.Distance(transform.gameObject.transform.position, collider.transform.position);
             if (distance < minimumDistance)
             {

@@ -1651,7 +1651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9088914605784003052, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_Layer
@@ -2442,7 +2442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9088914605784003052, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_Layer
@@ -4333,22 +4333,22 @@ MonoBehaviour:
   pools:
   - type: Bullet
     prefab: {fileID: 6218341245850011874, guid: e055e3ec9d798da48aff123819c1a3b5, type: 3}
-    size: 50
+    size: 250
   - type: Enemy
     prefab: {fileID: 1799095163}
     size: 50
   - type: TwoBullet
     prefab: {fileID: 8911728954680919779, guid: f5f01c9a7daa0d847934cd95f75aa060, type: 3}
-    size: 5
+    size: 0
   - type: ThreeBullet
     prefab: {fileID: 8911728954680919779, guid: 71b4abc9a7c74374f901b180bad0ec8e, type: 3}
-    size: 5
+    size: 0
   - type: Money
     prefab: {fileID: 3473397771379260769, guid: 88ad78cf64529d744b5be7d204033912, type: 3}
-    size: 20
+    size: 50
   - type: ExplosionEffect
     prefab: {fileID: 132352, guid: 71b02155078e4bf4e962f302d3675af2, type: 3}
-    size: 20
+    size: 50
 --- !u!4 &1492722831
 Transform:
   m_ObjectHideFlags: 0
@@ -5226,7 +5226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9088914605784003052, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_Layer
@@ -6032,7 +6032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971786455124417499, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9088914605784003052, guid: 9deea68aac80e34468894a32711ad349, type: 3}
       propertyPath: m_Layer

@@ -10,6 +10,8 @@ public class ShootingManager : MonoBehaviour
     [SerializeField] Shoot Shoot;
     //MissileShot missileShot;
     EnemyAl en;
+
+    int RandomIndex;
     private void Awake()
     {
         //closestEnemy.Initiliaze(this);
@@ -17,17 +19,19 @@ public class ShootingManager : MonoBehaviour
         en = new EnemyAl();
         //missileShot=new MissileShot();
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, closestEnemy.OverlapRadius);
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(transform.position, closestEnemy.OverlapRadius);
 
-    }
+    //}
     private void Update()
     {
+
         if (closestEnemy == null ) return;
         closestEnemy.GetNearestEnemy(transform);
         var closest = closestEnemy.nearestEnemy;
+
         if (Input.GetKeyDown(KeyCode.X) && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 30)
         {
             Shoot.Fire(this, closest);
