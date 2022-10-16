@@ -15,9 +15,9 @@ public class Player3DExample : MonoBehaviour
     {
         JoystickEvent += shotJoystick;
     }
-    void Update()
+    void FixedUpdate()
     {
- 
+  
         Vector3 moveVector = (Vector3.right * joystick.Horizontal + Vector3.forward * joystick.Vertical);
         if (moveVector != Vector3.zero && joystick != null)
         {

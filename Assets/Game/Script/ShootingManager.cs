@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using DG.Tweening;
 
 public class ShootingManager : MonoBehaviour
 {
+     UnityAction<Transform> shootEvent;
+
     ClosestEnemy closestEnemy = new ClosestEnemy();
     //[SerializeField] Shoot shoot;
     [SerializeField] Shoot Shoot;
     //MissileShot missileShot;
     EnemyAl en;
+    float elapsed = 1;
 
-    int RandomIndex;
     private void Awake()
     {
+       shootEvent += ShootReady;
         //closestEnemy.Initiliaze(this);
         //shoot.Initiliaze(this);
         en = new EnemyAl();
@@ -25,29 +29,30 @@ public class ShootingManager : MonoBehaviour
     //    Gizmos.DrawWireSphere(transform.position, closestEnemy.OverlapRadius);
 
     //}
-    private void Update()
+    private void FixedUpdate()
     {
-
-        if (closestEnemy == null ) return;
+        elapsed += Time.deltaTime;
+        if (closestEnemy == null) return;
         closestEnemy.GetNearestEnemy(transform);
         var closest = closestEnemy.nearestEnemy;
 
-        if (Input.GetKeyDown(KeyCode.X) && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 30)
+        if ( Input.GetMouseButton(0) && elapsed >= 1f && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 30)
         {
-            Shoot.Fire(this, closest);
+            shootEvent?.Invoke(closest);
+
+            elapsed = elapsed % 1f;
 
         }
 
-
-        //if (closestEnemy == null) return;
-        //closestEnemy.GetNearestEnemy(this);
-        //if (Input.GetKeyDown(KeyCode.Space) && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 30)
-        //{
-        //    shoot.Fire(this, closestEnemy.nearestEnemy);
-        //}
-
     }
+
+    void ShootReady(Transform transform)
+    {
+        Shoot.Fire(this, transform);
+    }
+ 
 }
+
 
 
 
