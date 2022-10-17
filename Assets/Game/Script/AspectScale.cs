@@ -1,36 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AspectScale : MonoBehaviour
 {
-    private Vector3 _baseScale;
-    private Vector3 _current;
-    private Transform _transform;
-
-    private void OnEnable()
+    float totalhp = 100;
+    public Image hpbarimage;
+    private void Awake()
     {
-        _transform = transform;
-        _baseScale = _transform.localScale;
-        _current = _baseScale;
+        hpbarimage.GetComponent<Image>();
     }
-
     private void Update()
     {
-        if (_transform.hasChanged)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (_current.x != _transform.localScale.x)
-                SetScale(_transform.localScale.x / _baseScale.x);
-            else if (_current.y != _transform.localScale.y)
-                SetScale(_transform.localScale.y / _baseScale.y);
-            else if (_current.z != _transform.localScale.z)
-                SetScale(_transform.localScale.z / _baseScale.z);
+            hpbarimage.fillAmount =  totalhp/100;
+
+            totalhp = totalhp - 5;
+            Debug.Log("curren hp" + totalhp);
+            Debug.Log("bar AMOUNT" + hpbarimage.fillAmount);
         }
     }
 
-    private void SetScale(float value)
-    {
-        _transform.localScale = _baseScale * value;
-        _current = _transform.localScale;
-    }
+
 }

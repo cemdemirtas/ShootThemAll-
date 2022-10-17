@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1090321079
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26,20 +26,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090321078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.057139482, y: 0.37686723, z: -0.03633173, w: 0.9237891}
+  m_LocalPosition: {x: 0, y: 0, z: -0.36961204}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1362165762}
   m_Father: {fileID: 2062843869853752879}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0, y: 3.8200006}
+  m_SizeDelta: {x: 800, y: 440.5797}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1090321082
 Canvas:
   m_ObjectHideFlags: 0
@@ -49,7 +49,7 @@ Canvas:
   m_GameObject: {fileID: 1090321078}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1090321080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1471,10 +1471,10 @@ Transform:
   m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1090321079}
   - {fileID: 2078499449995385126}
   - {fileID: 2625146527316974092}
   - {fileID: 8990143963529430330}
-  - {fileID: 1090321079}
   - {fileID: 4132551718351386814}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1493,6 +1493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   joystick: {fileID: 0}
+  hpBarIcon: {fileID: 0}
   _dustEffect: {fileID: 4132551718370705134}
 --- !u!136 &1723578198681830544
 CapsuleCollider:
@@ -5293,7 +5294,7 @@ Transform:
   - {fileID: 2002648417489573425}
   - {fileID: 6994181872675175061}
   m_Father: {fileID: 2062843869853752879}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7374216016982568311
 GameObject:
@@ -5555,7 +5556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2062843869853752879}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &715003532480089837
 SkinnedMeshRenderer:
@@ -6250,7 +6251,7 @@ Transform:
   m_Children:
   - {fileID: 6626874939335667850}
   m_Father: {fileID: 2062843869853752879}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -54.832, z: 0}
 --- !u!1 &8631931962527764704
 GameObject:

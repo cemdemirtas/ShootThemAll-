@@ -2,14 +2,16 @@
 using System;
 using UnityEngine.Events;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Player3DExample : MonoBehaviour
 {
 
     public float moveSpeed = 8f;
+    public float _totalHp = 100f;
     public Joystick joystick;
     public static UnityAction JoystickEvent;
-
+    [SerializeField] Image hpBarIcon;
     [SerializeField] ParticleSystem _dustEffect;
     private void OnEnable()
     {
@@ -17,14 +19,13 @@ public class Player3DExample : MonoBehaviour
     }
     void FixedUpdate()
     {
-  
+        
+
         Vector3 moveVector = (Vector3.right * joystick.Horizontal + Vector3.forward * joystick.Vertical);
         if (moveVector != Vector3.zero && joystick != null)
         {
             transform.rotation = Quaternion.LookRotation(moveVector);
             transform.Translate(moveVector * moveSpeed * Time.deltaTime, Space.Self);
-            
-
         }
     }
     void shotJoystick()
@@ -39,5 +40,30 @@ public class Player3DExample : MonoBehaviour
         yield return new WaitForSeconds(1f);
         _dustEffect.Play();
     }
+    void Damage(int damage)
+    {
+            hpBarIcon.fillAmount = _totalHp / 100;
+            _totalHp = _totalHp - damage;
+            Debug.Log("curren hp" + _totalHp);
+            Debug.Log("bar AMOUNT" + hpBarIcon.fillAmount);
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.TryGetComponent<IDamageable>(out var damageable))
+        {
+            Damage(5);
+            Debug.Log("COLLIDED");
+        }
+
+    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.transform.TryGetComponent<IDamageable>(out var damageable))
+    //    {
+    //        Debug.Log("COLLIDED");
+    //        Damage(5);
+    //    }
+    //}
 }
