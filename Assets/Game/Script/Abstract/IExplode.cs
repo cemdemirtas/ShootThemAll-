@@ -1,5 +1,6 @@
 using UnityEngine;
 
-	public interface IExplode {
-		void Explode();
-	}
+public interface IExplode
+{
+    void Explode();
+}

@@ -19,10 +19,10 @@ public class Player3DExample : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
+
 
         Vector3 moveVector = (Vector3.right * joystick.Horizontal + Vector3.forward * joystick.Vertical);
-        if (moveVector != Vector3.zero && joystick != null)
+        if (moveVector != Vector3.zero && joystick != null && _totalHp > 0)
         {
             transform.rotation = Quaternion.LookRotation(moveVector);
             transform.Translate(moveVector * moveSpeed * Time.deltaTime, Space.Self);
@@ -42,28 +42,16 @@ public class Player3DExample : MonoBehaviour
     }
     void Damage(int damage)
     {
-            hpBarIcon.fillAmount = _totalHp / 100;
-            _totalHp = _totalHp - damage;
-            Debug.Log("curren hp" + _totalHp);
-            Debug.Log("bar AMOUNT" + hpBarIcon.fillAmount);
-
+        hpBarIcon.fillAmount = _totalHp / 100;
+        _totalHp = _totalHp - damage;
+        if (_totalHp <= 0) 
+        {
+            UIManager.Instance.PlayerDieEvent?.Invoke();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.TryGetComponent<IDamageable>(out var damageable))
-        {
-            Damage(5);
-            Debug.Log("COLLIDED");
-        }
-
+        if (other.transform.TryGetComponent<IDamageable>(out var damageable)) Damage(5);
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.transform.TryGetComponent<IDamageable>(out var damageable))
-    //    {
-    //        Debug.Log("COLLIDED");
-    //        Damage(5);
-    //    }
-    //}
 }

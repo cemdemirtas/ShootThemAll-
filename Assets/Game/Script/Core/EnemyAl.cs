@@ -9,10 +9,9 @@ public class EnemyAl : MonoBehaviour, IInterract
     NavMeshAgent nav;
     private float OverlapRadius = 100;
     private Transform nearestEnemy;
+    [SerializeField] Transform player;
     private int enemyLayer;
     Animator animator;
-    //[SerializeField] GameObject player;
-    [SerializeField] ParticleSystem explosionEffect;
     private void Start()
     {
         enemyLayer = LayerMask.NameToLayer("Player");
@@ -24,7 +23,6 @@ public class EnemyAl : MonoBehaviour, IInterract
     private void Update()
     {
         GetClosestEnemy();
-        //nav.destination = nearestEnemy.position;
         animator.SetBool("Walking", true);
         if (Vector3.Distance(nav.destination, nav.transform.position) <= nav.stoppingDistance)
         {
@@ -32,7 +30,6 @@ public class EnemyAl : MonoBehaviour, IInterract
             {
                 animator.SetBool("Walking", false);
                 animator.SetBool("Attacking", true);
-
             }
 
         }
@@ -40,7 +37,6 @@ public class EnemyAl : MonoBehaviour, IInterract
         {
             animator.SetBool("Walking", true);
             animator.SetBool("Attacking", true);
-
         }
 
 
@@ -58,29 +54,24 @@ public class EnemyAl : MonoBehaviour, IInterract
                 minimumDistance = distance;
                 nearestEnemy = collider.transform;
                 nav.SetDestination(nearestEnemy.position);
-
             }
         }
     }
 
     public void interract()
     {
-
         StartCoroutine(nameof(Die));
-
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bullet")
         {
+            Money.coinGoEvent?.Invoke(player.transform);
             interract();
-            //UIManager.instance._killCount++;
-            //Debug.Log("kill count"+UIManager.instance._killCount);
         }
     }
     IEnumerator Die()
     {
-        explosionEffect.Play();
         UIManager.Instance.KillEvent?.Invoke();
         yield return new WaitForSeconds(0.5f);
         this.gameObject.SetActive(false);

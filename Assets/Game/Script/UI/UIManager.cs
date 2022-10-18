@@ -8,9 +8,9 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    //public static UIManager instance;
     public static UnityAction UpgradePanelEvent;
     public UnityAction KillEvent;
+    public UnityAction PlayerDieEvent;
 
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] Image _killSlider;
@@ -40,6 +40,15 @@ public class UIManager : MonoBehaviour
         KillEvent += PanelCount;
         KillEvent += KillCount;
         UpgradePanelEvent += UpgradePanelShow;
+        PlayerDieEvent += Die;
+    }
+    private void OnDisable()
+    {
+        KillEvent -= PanelCount;
+        KillEvent -= KillCount;
+        UpgradePanelEvent -= UpgradePanelShow;
+        PlayerDieEvent -= Die;
+
     }
     public void UpgradePanelHide()
     {
@@ -49,7 +58,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpgradePanelShow()
     {
-        if (_panelCount == 29)
+        if (_panelCount == 44)
         {
             _upgradePanel.SetActive(true);
             Time.timeScale = 0;
@@ -80,5 +89,11 @@ public class UIManager : MonoBehaviour
             _LevelIndexText.text = "Level: " + _levelSO.LevelIndex;
             _killCount = 0;
         }
+    }
+
+    private void Die()
+    {
+        GameManager.Instance.gamestate = GameManager.GameState.GameOver;
+        Time.timeScale = 0;
     }
 }

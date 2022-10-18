@@ -13,6 +13,5 @@ using UnityEngine;
             _rb.velocity = dir;
         }
 
-    //public void Explode() { }
     public void Explode() => (gameObject).SetActive(false);
 }

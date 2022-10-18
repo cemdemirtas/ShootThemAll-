@@ -166,7 +166,6 @@ MonoBehaviour:
   _rb: {fileID: 184470500350564771}
   _target: {fileID: 448740, guid: 71b02155078e4bf4e962f302d3675af2, type: 3}
   _explosionPrefab: {fileID: 132352, guid: 71b02155078e4bf4e962f302d3675af2, type: 3}
-  _speed: 1
   _rotateSpeed: 1000
   _maxDistancePredict: 250
   _minDistancePredict: 0
@@ -312,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _missile: {fileID: 0}
+  player: {fileID: 2062843869853752879, guid: 8ea0d289104cab54697227c5542b3ef4, type: 3}
 --- !u!1 &7604778225646678301
 GameObject:
   m_ObjectHideFlags: 0

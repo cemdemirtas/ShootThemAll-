@@ -19,18 +19,9 @@ public class ClosestEnemy
     {
         _shootingManager = shootingManager;
     }
-    //private void Start()
-    //{
-    //    enemyLayer = LayerMask.NameToLayer("Enemy");
-    //    Debug.Log(enemyLayer);
-    //}
-
    public void GetNearestEnemy(Transform transform)
     {
-        //RandomIndex = Random.Range(0, colliderList.Count);
         enemyLayer = LayerMask.NameToLayer("Enemy");
-     
-
         if (nearestEnemy != null)
         {
             return;
@@ -45,20 +36,9 @@ public class ClosestEnemy
             float distance = Vector3.Distance(transform.gameObject.transform.position, collider.transform.position);
             if (distance < minimumDistance)
             {
-
-                //minimumDistance = distance;
-                //nearestEnemy = collider.transform;
-
+                //Choose closest target.
             }
-        }
-        if (nearestEnemy != null)
-        {
-            //nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.red;
-            //Debug.Log("Nearest Enemy: " + nearestEnemy + "; Distance: " + minimumDistance);
-        }
-        else
-        {
-            //Debug.Log("There is no enemy in the given radius");
-        }
+
+    }
     }
 }

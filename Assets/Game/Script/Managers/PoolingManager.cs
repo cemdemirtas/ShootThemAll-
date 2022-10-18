@@ -20,7 +20,7 @@ public class PoolingManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance==null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -49,7 +49,6 @@ public class PoolingManager : MonoBehaviour
         {
             GameObject enemy = SpawnFromPool("Enemy", new Vector3(10, 1, 20), Quaternion.identity);
             enemy.SetActive(true);
-            Debug.Log("Spawned enemy");
         }
     }
 

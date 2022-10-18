@@ -15,6 +15,7 @@ public class GameManager :MonoBehaviour
     private void Awake()
     {
         if(Instance==null) { Instance = this; }
+        DontDestroyOnLoad(this);
     }
     public enum GameState // we arrange state and panels
     {
@@ -110,6 +111,8 @@ public class GameManager :MonoBehaviour
     }
     void GameOver()
     {
+        UIManager.Instance._gameUI.gameObject.SetActive(false);
+        Player3DExample.JoystickEvent?.Invoke();
         countdown -= Time.deltaTime;
         if (countdown < 0)
         {

@@ -5,5 +5,5 @@ using UnityEngine.UI;
 
 public interface IDamageable 
 {
-    void takeDamage(int damage, Image hpBarIcon, Transform transform);
+    void takeDamage();
 }

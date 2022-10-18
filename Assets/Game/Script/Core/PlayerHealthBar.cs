@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerHealthBar : MonoBehaviour
 {
     public Camera cam;
-    private void Awake()
-    {
-    }
+
     private void LateUpdate()
     {
       if(cam!=null)  transform.LookAt(cam.transform);
