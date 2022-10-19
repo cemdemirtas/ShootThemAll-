@@ -8,14 +8,17 @@ public class Player3DExample : MonoBehaviour
 {
 
     public float moveSpeed = 8f;
-    public float _totalHp = 100f;
+    public float _totalHp;
     public Joystick joystick;
     public static UnityAction JoystickEvent;
     [SerializeField] Image hpBarIcon;
+    [SerializeField] UpgradeSO _upgradeSO;
     [SerializeField] ParticleSystem _dustEffect;
     private void OnEnable()
     {
         JoystickEvent += shotJoystick;
+        UIManager.Instance.GetHealthEvent += hpUpdater;
+
     }
     void FixedUpdate()
     {
@@ -40,18 +43,33 @@ public class Player3DExample : MonoBehaviour
         yield return new WaitForSeconds(1f);
         _dustEffect.Play();
     }
-    void Damage(int damage)
+    //void Damage(int damage)
+    //{
+    //    hpBarIcon.fillAmount = _totalHp / 100;
+    //    _totalHp = _totalHp - damage;
+    //    if (_totalHp <= 0) 
+    //    {
+    //        UIManager.Instance.PlayerDieEvent?.Invoke();
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.TryGetComponent<IDamageable>(out var damageable)) HpBooster(5);
+    }
+    void HpBooster(int damage)
     {
         hpBarIcon.fillAmount = _totalHp / 100;
         _totalHp = _totalHp - damage;
-        if (_totalHp <= 0) 
+        if (_totalHp <= 0)
         {
             UIManager.Instance.PlayerDieEvent?.Invoke();
         }
     }
-
-    private void OnTriggerEnter(Collider other)
+    void hpUpdater()
     {
-        if (other.transform.TryGetComponent<IDamageable>(out var damageable)) Damage(5);
+        _totalHp = _upgradeSO.Health;
+        hpBarIcon.fillAmount = _totalHp / 100;
+        if(_upgradeSO.Health>100) _upgradeSO.Health = 100;
     }
 }

@@ -12,7 +12,7 @@ public class ShootingManager : MonoBehaviour
     [SerializeField] Shoot Shoot;
 
     float elapsed = 1;
-
+    Touch touch;
     private void Awake()
     {
         shootEvent += ShootReady;
@@ -25,7 +25,7 @@ public class ShootingManager : MonoBehaviour
         closestEnemy.GetNearestEnemy(transform);
         var closest = closestEnemy.nearestEnemy;
 
-        if (Input.GetMouseButton(0) && elapsed >= 1f && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 45)
+        if (Input.touchCount > 0 && elapsed >= 1f && closestEnemy.nearestEnemy != null && UIManager.Instance._panelCount < 45)
         {
             shootEvent?.Invoke(closest);
             elapsed = elapsed % 1f;

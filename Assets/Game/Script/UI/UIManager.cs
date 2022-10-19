@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public static UnityAction UpgradePanelEvent;
     public UnityAction KillEvent;
     public UnityAction PlayerDieEvent;
+    public UnityAction GetHealthEvent;
 
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] Image _killSlider;
@@ -94,6 +95,5 @@ public class UIManager : MonoBehaviour
     private void Die()
     {
         GameManager.Instance.gamestate = GameManager.GameState.GameOver;
-        Time.timeScale = 0;
     }
 }

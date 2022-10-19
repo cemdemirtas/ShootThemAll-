@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletForwardSpeed: 10
   BulletCount: 0
-  MissileCount: 4
-  Health: 100
-  Money: 2093200
+  MissileCount: 5
+  Health: 40
+  Money: 2236200

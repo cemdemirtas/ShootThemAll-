@@ -118,7 +118,7 @@ public class GameManager :MonoBehaviour
         {
             PanelController(Panels.GameOverp);
             countdown = 2.5f;
-
+            Time.timeScale = 0;
         }
 
     }
