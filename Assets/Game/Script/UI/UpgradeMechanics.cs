@@ -35,6 +35,6 @@ public class UpgradeMechanics : MonoBehaviour
     {
         UIManager.Instance.UpgradePanelHide();
         _upgradeSO.Health+=50;
-        UIManager.Instance.GetHealthEvent?.Invoke();
+        UIManager.GetHealthEvent?.Invoke();
     }
 }

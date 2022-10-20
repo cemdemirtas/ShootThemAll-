@@ -17,7 +17,7 @@ public class Player3DExample : MonoBehaviour
     private void OnEnable()
     {
         JoystickEvent += shotJoystick;
-        UIManager.Instance.GetHealthEvent += hpUpdater;
+        UIManager.GetHealthEvent += hpUpdater;
 
     }
     void FixedUpdate()

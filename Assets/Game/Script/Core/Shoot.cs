@@ -28,7 +28,6 @@ public class Shoot : MonoBehaviour
         _bulletType = ((UpgradeSO.bulletTypeEnum)_upgradeSO.BulletCount).ToString();
         AddMissile();
         MissileBuildEvent += AddMissile;
-        _closestEnemy = new ClosestEnemy();
         _shootingManager = GetComponent<ShootingManager>();
 
     }

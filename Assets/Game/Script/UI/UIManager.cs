@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public static UnityAction UpgradePanelEvent;
     public UnityAction KillEvent;
     public UnityAction PlayerDieEvent;
-    public UnityAction GetHealthEvent;
+    public static UnityAction GetHealthEvent;
 
     [SerializeField] GameObject _upgradePanel;
     [SerializeField] Image _killSlider;
